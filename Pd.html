@@ -141,13 +141,26 @@
     .nav-links {
         flex-direction: column;
         width: 100%;
-        gap: 10px;
-        text-align: center;
+        gap: 20px;
+        padding: 20px 0;
+        margin: 0;
     }
 
     .nav-links li {
-        padding-right: 0;
         display: block;
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 5px 0;
     }
 
     .container, .about-container, .contact-container, .background-container {
@@ -239,8 +252,8 @@
             <li><a href="contact .html">Contact</a></li>
         </ul>
     </nav>
-     <h1>TOP  PRODUCTS</h1>
-     <div class="section-title">TOP PRODUCTS</div>
+     
+     <div class="section-title"><h1>TOP PRODUCTS</h1></div>
      <div class="product-grid">
          <div class="product-card">
              <img src="PICS/off-shoulder bodycon midi dress.jpg" alt="Product 1">

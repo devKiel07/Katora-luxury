@@ -3,289 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+    <title>Background Image Example</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to External CSS -->
+    <style>y {
+        body, html {ily: Arial, sans-serif;
+    margin: 0;rgin: 0;
+    padding: 0;ding: 0;
+    height: 100%;round-color: #f4f4f4;
+}       }
         .navbar {
-    display: flex;
+.navbar {ay: flex;
+    display: flex;t: space-between;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
+    padding: 5px 20px;/* Semi-transparent navbar */
     background:black; /* Semi-transparent navbar */
     position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
+    top: 0;;
+    left: 0; 1000;
     z-index: 1000;
 }
-
 /* Logo Image */
-.logo img {
+/* Logo Image */
+.logo img { 70px; /* Adjust size */
     height: 70px; /* Adjust size */
     width: auto;
-}
-.logo {
-    display: flex;
-    align-items: center;
+}logo {
+.logo {play: flex;
+    display: flex;enter;
+    align-items: center;etween image and text */
     gap: 1px; /* Space between image and text */
 }
-
 .logo-text {
-    color: white;
-    font-size: 20px; /* Adjust font size */
+.logo-text {hite;
+    color: white;px; /* Adjust font size */
+    font-size: 20px; /* Adjust font size */}
             font-family: Arial, sans-serif;}
-
 /* Navigation Links */
-.nav-links {
+/* Navigation Links */
+.nav-links {le: none;
     list-style: none;
     display: flex;
     gap: 20px;
 }
-
 .nav-links li {
-    display: inline;
+.nav-links li {line;
+    display: inline;0PX;
     padding-right: 70PX;
 }
-
 .nav-links a {
+.nav-links a {ation: none;
     text-decoration: none;
-    color: white;
-    font-size: 18px;
+    color: white;px;
+    font-size: 18px;r 0.3s ease;
     transition: color 0.3s ease;
 }
-
 /* Hover Effect for Navbar Links */
-.nav-links a:hover {
+/* Hover Effect for Navbar Links */
+.nav-links a:hover {;
     color: lightblue;
 }
 
-
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
+.product-section { {
+            margin-top: 100px; /* Space below navbar */
+            padding: 20px;uto;
+        }   padding: 20px;
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            margin: 10px 0 5px;
+        .section-title {s: 8px;
+            font-size: 24px;x 8px rgba(0, 0, 0, 0.1);
             font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }   text-align: center;
+            color: #333;
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three products per row */
+            gap: 20px; /* Space between products */
+            margin: 20px 0; column;
+            padding: 0 20px; /* Padding for the grid */
         }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="number"],
-        input[type="submit"] {
-            padding: 10px;
-            margin-bottom: 15px;
+        label {
+        .product-card {x 0 5px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }nput[type="number"],
+        input[type="submit"] {
+        .product-card img {
+            width: 100%;m: 15px;
+            height: 400px; /* Adjust height as needed */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 5px;
         }
 
-        input[type="submit"] {
+        .product-card h3 {"] {
+            font-size: 18px;: black;
+            margin: 10px 0;
+        }   cursor: pointer;
+            transition: background-color 0.3s ease;
+        .product-card p {
+            font-size: 14px;
+            color: #555;it"]:hover {
+        }   background-color: blue;
+        }
+        .product-card .btn {
+            display: inline-block;
+            margin-top: 10px; 768px) {
+            padding: 8px 16px;
             background-color: black;
             color: white;
-            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 5px;
             transition: background-color 0.3s ease;
-        }
-
-        input[type="submit"]:hover {
-            background-color: blue;
-        }
-
+        }argin-bottom: 10px;
+    }
+        .product-card .btn:hover {
+            background-color: blue;}
+        flex-direction: column;
+        width: 100%;
 /* Mobile Responsive Design */
 @media screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
         padding: 10px;
         position: static;
+        width: 100%;   display: block;
+        box-sizing: border-box;    }
     }
-
-    .logo {
-        margin-bottom: 10px;
+iner, .contact-container, .background-container {
+    .logo {   margin-top: 20px;
+        margin-bottom: 10px;        padding: 15px;
+        justify-content: center;h: 100%;
     }
 
     .nav-links {
         flex-direction: column;
         width: 100%;
-        gap: 10px;
-        text-align: center;
+        gap: 0;
+        padding: 0;    p {
+        margin: 0;16px;
     }
 
     .nav-links li {
-        padding-right: 0;
-        display: block;
+        display: block;e-columns: 1fr;
+        padding: 15px 0;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .container, .about-container, .contact-container, .background-container {
-        margin-top: 20px;
-        padding: 15px;
-        max-width: 100%;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
-
-    .product-card {
-        margin-bottom: 20px;
-    }
-
-    .content {
-        width: 90%;
-        padding: 15px;
-    }
-
-    footer {
-        padding: 15px;
-    }
-
-    footer div {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-/* Additional styles for very small screens */
-@media screen and (max-width: 480px) {
-    .logo img {
-        height: 50px;
-    }
-
-    .logo-text {
-        font-size: 16px;
+    .nav-links li:last-child {
+        border-bottom: none;
     }
 
     .nav-links a {
-        font-size: 16px;
+        display: block;
+        padding: 5px 0;
+        font-size: 18px;
     }
 
-    .container, .about-container, .contact-container {
-        margin: 10px;
-    }
+    .nav-links a:hover {ooter div {
+        color: lightblue;        flex-direction: column;
+    }gap: 10px;
 
-    .product-card img {
-        height: 300px;
-    }
-
-    .content h1 {
+    .container, .about-container, .contact-container, .background-container {
+        margin-top: 20px;
+        padding: 15px;tional styles for very small screens */
+        max-width: 100%;idth: 480px) {
+    }logo img {
+        height: 50px;
+    h1 {
         font-size: 24px;
     }
-
-    .content p {
-        font-size: 14px;
-    }
-
-    .btn {
-        padding: 8px 16px;
+   font-size: 16px;
+    p {    }
         font-size: 16px;
     }
+   font-size: 16px;
+    .product-grid {    }
+        grid-template-columns: 1fr;
+        padding: 10px;out-container, .contact-container {
+    }
+
+    .product-card {
+        margin-bottom: 20px;-card img {
+    }
+
+    .content {
+        width: 90%;{
+        padding: 15px;
+    }
+
+    footer {   .content p {
+        padding: 15px;        font-size: 14px;
+    }
+
+    footer div {
+        flex-direction: column;16px;
+        gap: 10px;   font-size: 16px;
+    }    }
+}
+
+/* Additional styles for very small screens */
+@media screen and (max-width: 480px) {</head>
+    .logo img {
+        height: 50px;
+    }   <div class="logo">
+            <img src="PICS/kl.jpg" alt="Logo"> 
+    .logo-text {>
+        font-size: 16px;
+    }   <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+    .nav-links a {="Pd.html">Products</a></li>
+        font-size: 16px;f="about.html">About</a></li>
+    }       <li><a href="contact .html">Contact</a></li>
+        </ul>
+    .container, .about-container, .contact-container {
+        margin: 10px;r">
+    }   <h1>Make Payment</h1>
+        <form action="process_payment.php" method="POST">
+    .product-card img {el for="product">Product Name</label>
+        height: 300px;"text" id="product" name="product" value="Selected Product" readonly>
+    }
+            <label for="price">Price</label>
+    .content h1 {  <input type="text" id="price" name="price" value="$0.00" readonly>
+        font-size: 24px;
+    }name">Your Name</label>
+       <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    .content p {
+        font-size: 14px;<label for="email">Your Email</label>
+    }        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    .btn {      <label for="card">Card Number</label>
+        padding: 8px 16px;"number" id="card" name="card" placeholder="Enter your card number" required>
+        font-size: 16px;
+    }">
 }
     </style>
-   
+    
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">
             <img src="PICS/kl.jpg" alt="Logo"> 
-            <span class="logo-text">atora luxury</span>
-        </div>
-        <ul class="nav-links">
+            <span class="logo-text">atora luxury</span>ooter Section -->
+        </div>nd-color: black; color: white; padding: 20px; text-align: center; margin-top: 40px;">
+        <ul class="nav-links">eserved.</p>
             <li><a href="index.html">Home</a></li>
-            <li><a href="Pd.html">Products</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact .html">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <h1>Make Payment</h1>
-        <form action="process_payment.php" method="POST">
-            <label for="product">Product Name</label>
-            <input type="text" id="product" name="product" value="Selected Product" readonly>
+            <li><a href="Pd.html">Products</a></li>justify-content: center; gap: 15px; margin-top: 10px;">
+            <li><a href="about.html">About</a></li>lor: white; text-decoration: none;">Facebook</a>
+            <li><a href="contact .html">Contact</a></li>" target="_blank" style="color: white; text-decoration: none;">Twitter</a>
+        </ul>ps://instagram.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Instagram</a>
+    </nav>n: none;">LinkedIn</a>
+     <h1>TOP  PRODUCTS</h1>
+     <div class="section-title">TOP PRODUCTS</div>
+     <div class="product-grid">
+         <div class="product-card">
+             <img src="PICS/off-shoulder bodycon midi dress.jpg" alt="Product 1">
+             <h3>Off-shoulder bodycon midi dress</h3>
+             <p>$350</p>
+             <a href="payment.html?product=Off-shoulder%20bodycon%20midi%20dress&price=350" class="btn">Buy Now</a> from the URL
+         </div>
+         <div class="product-card">location.search);
+             <img src="PICS/black jacket.jpg" alt="Product 2">
+             <h3>Black Jacket with jeans</h3>
+             <p>$250</p>params.get('price') || '0.00'
+             <a href="payment.html?product=Black%20Jacket%20with%20jeans&price=250" class="btn">Buy Now</a>
+         </div>
+         <div class="product-card">
+             <img src="PICS/fashion.jpg" alt="Product 3">lds with the query parameters
+             <h3>Chic belted blazer dress</h3>
+             <p>$400</p>duct, price } = getQueryParams();
+             <a href="payment.html?product=Chic%20belted%20blazer%20dress&price=400" class="btn">Buy Now</a>    const productInput = document.getElementById('product');
+         </div>ElementById('price');
+         <div class="product-card">
+             <img src="PICS/officer wear.jpg" alt="Product 4">) {
+             <h3>Satin blouse and high-waisted wide-leg pants outfit</h3>ue = product;
+             <p>$500</p>
+             <a href="payment.html?product=Satin%20blouse%20and%20high-waisted%20wide-leg%20pants%20outfit&price=500" class="btn">Buy Now</a>
+         </div>
 
-            <label for="price">Price</label>
-            <input type="text" id="price" name="price" value="$0.00" readonly>
-
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-            <label for="card">Card Number</label>
-            <input type="number" id="card" name="card" placeholder="Enter your card number" required>
-
-            <input type="submit" value="Pay Now">
-        </form>
+         <div class="product-card">            <img src="PICS/Dior.jpg" alt="Product 5">            <h3>Dior hand bag</h3>            <p>$5000</p>            <a href="payment.html?product=Dior%20hand%20bag&price=5000"  class="btn">Buy Now</a>        </div>        <div class="product-card">            <img src="PICS/diamond necklace.jpg" alt="Product 6">            <h3>Diamond Necklace</h3>            <p>$50,000</p>            <a href="payment.html?product=Diamond%20Necklace&price=50000" class="btn">Buy Now</a>        </div>     </div>            <div style="margin: 40px 0;"></div><div class="section-title">NEW ARRIVAL</div><div class="product-grid">    <div class="product-card">        <img src="PICS/White Shirt Maxi Dress with High Slit.jpg" alt="Product 7">        <h3>White Shirt Maxi Dress with High Slit</h3>        <p>$450</p>        <a href="payment.html?product=White%20Shirt%20Maxi%20Dress%20with%20High%20Slit&price=450" class="btn">Buy Now</a>    </div>    <div class="product-card">        <img src="PICS/purple blazer.jpg" alt="Product 8">        <h3>Purple Blazer</h3>        <p>$550</p>        <a href="payment.html?product=Purple%20Blazer&price=550" class="btn">Buy Now</a>    </div>    <div class="product-card">        <img src="PICS/Wide-Leg High-Waisted Pants with Cropped Turtleneck Sweater.jpg" alt="Product 9">        <h3>Wide-Leg High-Waisted Pants with Cropped Turtleneck Sweater</h3>        <p>$520</p>        <a href="payment.html?product=Wide-Leg%20High-Waisted%20Pants%20with%20Cropped%20Turtleneck%20Sweater&price=520" class="btn">Buy Now</a>    </div>    <div class="product-card">        <img src="PICS/g.jpg" alt="Product 10">        <h3>Booho Top with Jeans</h3>        <p>$600</p>        <a href="payment.html?product=Booho%20Top%20with%20Jeans&price=600" class="btn">Buy Now</a>    </div>    <div class="product-card">        <img src="PICS/rolex.jpg" alt="Product 11">        <h3>Rolex</h3>        <p>$80,000</p>        <a href="payment.html?product=Rolex&price=80000" class="btn">Buy Now</a>    </div>    <div class="product-card">        <img src="PICS/omega constelation.jpg" alt="Product 12">        <h3>Omega Constellation Watch</h3>        <p>$60,000</p>        <a href="payment.html?product=Omega%20Constellation%20Watch&price=60000" class="btn">Buy Now</a>    </div>     </div>         </form></div><!-- Footer Section --><footer style="background-color: black; color: white; padding: 20px; text-align: center; margin-top: 40px;">    <p>&copy; 2025 Katora Luxury. All rights reserved.</p>    <p>Follow us on:</p>    <div style="display: flex; justify-content: center; gap: 15px; margin-top: 10px;">        <a href="https://facebook.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Facebook</a>        <a href="https://twitter.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Twitter</a>        <a href="https://instagram.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Instagram</a>        <a href="https://linkedin.com/company/katoraluxury" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
     </div>
+</footer>
 
-    ...existing code...
 
-        </form>
-    </div>
-
-    <!-- Footer Section -->
-    <footer style="background-color: black; color: white; padding: 20px; text-align: center; margin-top: 40px;">
-        <p>&copy; 2025 Katora Luxury. All rights reserved.</p>
-        <p>Follow us on:</p>
-        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 10px;">
-            <a href="https://facebook.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Facebook</a>
-            <a href="https://twitter.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Twitter</a>
-            <a href="https://instagram.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Instagram</a>
-            <a href="https://linkedin.com/company/katoraluxury" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
-        </div>
-    </footer>
-
-</body>
-
-</body>
-<script>
-// Function to get query parameters from the URL
-function getQueryParams() {
-    const params = new URLSearchParams(window.location.search);
-    return {
-        product: params.get('product') || 'Selected Product',
-        price: params.get('price') || '0.00'
-    };
-}
-
-// Populate the form fields with the query parameters
-document.addEventListener('DOMContentLoaded', () => {
-    const { product, price } = getQueryParams();
-    const productInput = document.getElementById('product');
-    const priceInput = document.getElementById('price');
-
-    if (productInput && priceInput) {
-        productInput.value = product;
-        priceInput.value = `$${price}`;
-    }
-});
-</script>
+        
+        </body>
 </html>
