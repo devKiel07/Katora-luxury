@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="PICS/logo.jpg">
+    <link rel="shortcut icon" type="image/jpg" href="PICS/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>About Us - Katora Luxury</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
         }
 
         .navbar {
@@ -24,6 +29,7 @@
             left: 0;
             z-index: 1000;
             box-sizing: border-box;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
@@ -35,11 +41,18 @@
         .logo img {
             height: 70px;
             width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
         }
 
         .logo-text {
             color: white;
             font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 1px;
         }
 
         .nav-links {
@@ -59,47 +72,118 @@
             text-decoration: none;
             color: white;
             font-size: 18px;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
-        .nav-links a:hover {
-            color: lightblue;
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
         }
 
         .about-container {
-            margin-top: 100px;
-            padding: 20px;
-            max-width: 800px;
+            margin-top: 120px;
+            padding: 40px;
+            max-width: 1000px;
             margin-left: auto;
             margin-right: auto;
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .about-container h1 {
             text-align: center;
-            color: #333;
-            margin-bottom: 20px;
+            color: #000;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            font-weight: 300;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        .about-container h1:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: #000;
+            margin: 20px auto;
         }
 
         .about-container p {
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.8;
             color: #555;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            font-weight: 300;
         }
 
         .about-container ul {
-            margin: 20px 0;
+            margin: 30px 0;
             padding-left: 20px;
         }
 
         .about-container li {
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.8;
             color: #555;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+            font-weight: 300;
+        }
+
+        .about-container li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #000;
+        }
+
+        .highlight-box {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid #000;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 10px 0;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            margin: 0 15px;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        footer a:hover {
+            transform: translateY(-3px);
         }
 
         @media screen and (max-width: 768px) {
@@ -117,40 +201,22 @@
                 flex-direction: column;
                 width: 100%;
                 gap: 0;
-                padding: 0;
-                margin: 0;
             }
 
             .nav-links li {
-                display: block;
                 padding: 15px 0;
                 text-align: center;
                 width: 100%;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             }
 
-            .nav-links li:last-child {
-                border-bottom: none;
-            }
-
-            .nav-links a {
-                display: block;
-                padding: 5px 0;
-                font-size: 18px;
-            }
-
             .about-container {
                 margin: 20px;
-                padding: 15px;
+                padding: 20px;
             }
 
             .about-container h1 {
-                font-size: 24px;
-            }
-
-            .about-container p,
-            .about-container li {
-                font-size: 16px;
+                font-size: 2em;
             }
         }
 
@@ -163,7 +229,12 @@
                 font-size: 16px;
             }
 
-            .nav-links a {
+            .about-container {
+                padding: 15px;
+            }
+
+            .about-container p,
+            .about-container li {
                 font-size: 16px;
             }
         }
@@ -185,9 +256,11 @@
 
     <div class="about-container">
         <h1>About Us</h1>
-        <p>
-            Welcome to Katora Luxury, where elegance meets sophistication. We are a luxury brand that specializes in offering exquisite products designed for the discerning individual.
-        </p>
+        <div class="highlight-box">
+            <p>
+                Welcome to Katora Luxury, where elegance meets sophistication. We are a luxury brand that specializes in offering exquisite products designed for the discerning individual.
+            </p>
+        </div>
         <p>
             Katora Luxury is a premium brand dedicated to providing high-quality luxury products that combine style, comfort, and elegance. 
             Our mission is to redefine luxury by offering timeless designs that cater to the modern individual.
@@ -196,33 +269,37 @@
             Our main objectives include:
         </p>
         <ul>
-            <li>Establishing the brand as a recognized name in the luxury market.</li>
-            <li>Growing a strong social media presence to effectively target our audience.</li>
-            <li>Increasing visibility, engagement, and followers on our Instagram and Facebook pages.</li>
+            <li>Establishing the brand as a recognized name in the luxury market</li>
+            <li>Growing a strong social media presence to effectively target our audience</li>
+            <li>Increasing visibility, engagement, and followers on our Instagram and Facebook pages</li>
         </ul>
         <p>
             At Katora Luxury, we believe in creating a seamless shopping experience for our customers. 
             From our carefully curated collections to our exceptional customer service, we strive to exceed expectations at every step.
         </p>
-        <p>
-            Join us on our journey to make luxury accessible and timeless. Follow us on our social media platforms to stay updated on our latest collections and exclusive offers.
-        </p>
+        <div class="highlight-box" style="text-align: center; background: linear-gradient(to right, #f9f9f9, #ffffff);">
+            <p style="font-size: 20px; margin-bottom: 30px;">
+                Join us on our journey to make luxury accessible and timeless. Follow us on our social media platforms to stay updated on our latest collections and exclusive offers.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 25px; margin-top: 20px;">
+                <a href="https://www.facebook.com/kharen.mhartey/" target="_blank" rel="noopener" style="color: #000; text-decoration: none; font-size: 28px; transition: transform 0.3s ease;">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/katora_luxury/" target="_blank" rel="noopener" style="color: #000; text-decoration: none; font-size: 28px; transition: transform 0.3s ease;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/+233595304048" target="_blank" rel="noopener" style="color: #000; text-decoration: none; font-size: 28px; transition: transform 0.3s ease;">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
     </div>
 
-    <footer style="background-color: black; color: white; padding: 20px; text-align: center; margin-top: 40px;">
+    <footer>
         <p>&copy; 2025 Katora Luxury. All rights reserved.</p>
-        <p>Follow us on:</p>
-        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 10px;">
-            <a href="https://www.facebook.com/kharen.mhartey/" target="_blank" rel="noopener" style="color: white; text-decoration: none; font-size: 24px;">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/katora_luxury/" target="_blank" rel="noopener" style="color: white; text-decoration: none; font-size: 24px;">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://wa.me/+233595304048" target="_blank" rel="noopener" style="color: white; text-decoration: none; font-size: 24px;">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
+        <p>Visit Us In-Store: ASHALEY BOTWE, Ghana</p>
+        <p>Delivery at a fee</p>
+       
     </footer>
 </body>
 </html>
