@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Katora Luxury</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to External CSS -->
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            background: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 70px;
+            width: auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+            padding-right: 70PX;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: lightblue;
+        }
+
+        .contact-container {
+            margin-top: 100px; /* Space below navbar */
+            padding: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-container h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-container label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .contact-container input,
+        .contact-container textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-container textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .contact-container input[type="submit"] {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-container input[type="submit"]:hover {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="PICS/kl.jpg" alt="Logo">
+            <span class="logo-text">Katora Luxury</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Pd.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact .html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <form action="submit_contact.php" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+    ...existing code...
+
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer style="background-color: black; color: white; padding: 20px; text-align: center; margin-top: 40px;">
+        <p>&copy; 2025 Katora Luxury. All rights reserved.</p>
+        <p>Follow us on:</p>
+        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 10px;">
+            <a href="https://facebook.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Facebook</a>
+            <a href="https://twitter.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Twitter</a>
+            <a href="https://instagram.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Instagram</a>
+            <a href="https://linkedin.com/company/katoraluxury" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

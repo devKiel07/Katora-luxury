@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background:black; /* Semi-transparent navbar */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo Image */
+.logo img {
+    height: 70px; /* Adjust size */
+    width: auto;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1px; /* Space between image and text */
+}
+
+.logo-text {
+    color: white;
+    font-size: 20px; /* Adjust font size */
+            font-family: Arial, sans-serif;}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+    padding-right: 70PX;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Navbar Links */
+.nav-links a:hover {
+    color: lightblue;
+}
+
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="submit"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: blue;
+        }
+    </style>
+   
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="PICS/kl.jpg" alt="Logo"> 
+            <span class="logo-text">atora luxury</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Pd.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact .html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Make Payment</h1>
+        <form action="process_payment.php" method="POST">
+            <label for="product">Product Name</label>
+            <input type="text" id="product" name="product" value="Selected Product" readonly>
+
+            <label for="price">Price</label>
+            <input type="text" id="price" name="price" value="$0.00" readonly>
+
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="card">Card Number</label>
+            <input type="number" id="card" name="card" placeholder="Enter your card number" required>
+
+            <input type="submit" value="Pay Now">
+        </form>
+    </div>
+
+    ...existing code...
+
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer style="background-color: black; color: white; padding: 20px; text-align: center; margin-top: 40px;">
+        <p>&copy; 2025 Katora Luxury. All rights reserved.</p>
+        <p>Follow us on:</p>
+        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 10px;">
+            <a href="https://facebook.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Facebook</a>
+            <a href="https://twitter.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Twitter</a>
+            <a href="https://instagram.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Instagram</a>
+            <a href="https://linkedin.com/company/katoraluxury" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
+
+</body>
+<script>
+// Function to get query parameters from the URL
+function getQueryParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        product: params.get('product') || 'Selected Product',
+        price: params.get('price') || '0.00'
+    };
+}
+
+// Populate the form fields with the query parameters
+document.addEventListener('DOMContentLoaded', () => {
+    const { product, price } = getQueryParams();
+    const productInput = document.getElementById('product');
+    const priceInput = document.getElementById('price');
+
+    if (productInput && priceInput) {
+        productInput.value = product;
+        priceInput.value = `$${price}`;
+    }
+});
+</script>
+</html>
