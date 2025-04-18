@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Image Example</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to External CSS -->
+    <title>Contact Us - Katora Luxury</title>
     <style>
         body, html {
             margin: 0;
@@ -13,232 +12,219 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
+
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 5px 20px;
-            background: black; /* Semi-transparent navbar */
+            background: black;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
+            box-sizing: border-box;
         }
-        /* Logo Image */
-        .logo img {
-            height: 70px; /* Adjust size */
-            width: auto;
-        }
+
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px; /* Space between image and text */
+            gap: 10px;
         }
+
+        .logo img {
+            height: 70px;
+            width: auto;
+        }
+
         .logo-text {
             color: white;
-            font-size: 20px; /* Adjust font size */
-            font-family: Arial, sans-serif;
+            font-size: 20px;
         }
-        /* Navigation Links */
+
         .nav-links {
             list-style: none;
             display: flex;
             gap: 20px;
+            margin: 0;
+            padding: 0;
         }
+
         .nav-links li {
             display: inline;
             padding-right: 70px;
         }
+
         .nav-links a {
             text-decoration: none;
             color: white;
             font-size: 18px;
             transition: color 0.3s ease;
         }
-        /* Hover Effect for Navbar Links */
+
         .nav-links a:hover {
             color: lightblue;
         }
+
         .contact-container {
-            text-align: center;
+            margin-top: 100px;
+            padding: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .contact-container h1 {
             text-align: center;
+            color: #333;
+            margin-bottom: 30px;
         }
-        .background-container {
-            position: relative;
-            width: 100%;
-            height: 100vh; /* Full viewport height */
-            background-image: url('PICS/Lb.jpg'); /* Replace with your image */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
-        .background-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
-        .content {
-            position: absolute;
-            top: 50%; /* Center vertically */
-            left: 5%; /* Distance from the left */
-            transform: translateY(-50%); /* Adjusts to perfect vertical center */-width: 768px) {
-            text-align: left; /* Align text to the left */
-            color: white;;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        } to the left */
-        .content h1 {er-box;    color: white;: 100%;m: 15px;
-            font-size: 30px;
-        }
-        .content p {: 5px;
-            font-size: 16px;       margin-bottom: 10px;        }
-        }enter; Mobile */
-        .btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 12px 24px;       flex-direction: column;
-            background-color: white; /* Default color */idth: 100%;h1 {
-            color: black; input[type="submit"] {
-            text-decoration: none;
-            font-size: 18px;;
+
+        label {
             font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;       .product-card .btn {
+            color: #555;
         }
-        .btn:hover {
-            background-color: blue;blue;
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: black;
             color: white;
-        }5, 255, 255, 0.1);d-color: white; /* Default color */
-        /* Mobile Responsive Design */on: none;n */
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: blue;
+        }
+
         @media screen and (max-width: 768px) {
-            .navbar {child {
-                flex-direction: column;ground-color 0.3s ease;
-                padding: 10px;: 5px;: 10px;
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
                 position: static;
-                width: 100%;
-                box-sizing: border-box;ound-color: blue;}
-            }ver Effect (Changes to Blue) */
-            .logo {10px;
+            }
+
+            .logo {
                 margin-bottom: 10px;
-                justify-content: center;
-            }:hover {nav-links {
-            .nav-links {  flex-direction: column; column;
+            }
+
+            .nav-links {
                 flex-direction: column;
                 width: 100%;
-                gap: 0;ainer, .contact-container, .background-container {{ 100%;content {enter;
-                padding: 0; / border-box;        left: 3%; /
-                margin: 0;           padding: 15px;
-            }100%;
+                gap: 0;
+                padding: 0;
+                margin: 0;
+            }
+
             .nav-links li {
                 display: block;
-                padding: 15px 0;-width: 768px) {
-                text-align: center;   font-size: 24px;
+                padding: 15px 0;
+                text-align: center;
                 width: 100%;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            } static;olumn;;
-            .nav-links li:last-child {h: 100%;
+            }
+
+            .nav-links li:last-child {
                 border-bottom: none;
             }
-            .nav-links a {duct-grid {1 {
-                display: block;lumns: 1fr; {     font-size: 24px;
-                padding: 5px 0;x;        margin-bottom: 10px;
+
+            .nav-links a {
+                display: block;
+                padding: 5px 0;
                 font-size: 18px;
             }
-            .nav-links a:hover {6px;
-                color: lightblue;: 10px;
+
+            .contact-container {
+                margin: 20px;
+                padding: 15px;
             }
-            .content {
-                left: 3%; /* Moves content slightly closer to the left edge */
-            }
-            .content h1 {padding-right: 0;
-                font-size: 24px;  }none;lock;
-            }
-            .content p {
-                font-size: 14px;ock;d-container {
-            }in-top: 20px;
-            .btn {
-                padding: 8px 16px;
-                font-size: 16px; rgba(255, 255, 255, 0.1);
-            }   gap: 10px;    }       }
         }
-        /* Additional styles for very small screens */
+
         @media screen and (max-width: 480px) {
-            .logo img {ditional styles for very small screens */            }
-                height: 50px;ackground-container {
+            .logo img {
+                height: 50px;
             }
-            .content p {display: block;;
-                font-size: 14px;idth: 100%;x;
+
+            .logo-text {
+                font-size: 16px;
             }
-            .btn {   .logo-text {
-                padding: 8px 16px;        font-size: 16px;
-            }ll screens */
+
+            .nav-links a {
+                font-size: 16px;
+            }
+
+            input[type="submit"] {
+                padding: 10px;
+                font-size: 14px;
+            }
         }
-    </style>a {
-</head>px;
+    </style>
+</head>
 <body>
     <nav class="navbar">
-        <div class="logo">.about-container, .contact-container {ing: 15px; {
-            <img src="PICS/kl.jpg" alt="Logo"> d {        width: 90%;
-            <span class="logo-text">Katora Luxury</span>: 15px;
+        <div class="logo">
+            <img src="PICS/kl.jpg" alt="Logo">
+            <span class="logo-text">Katora Luxury</span>
         </div>
-        <ul class="nav-links">img {
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="Pd.html">Products</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-        </ul>px;
+        </ul>
     </nav>
 
-    <div class="background-container">
-        <div class="content">x;}               height: 300px;
-            <h1>Live Stylish and Dress Timelessly.</h1>
-            <p>We provide products that ensure that comfort meets luxury.</p>
-            <a href="Pd.html" class="btn">Shop now</a> ax-width: 480px) {
-        </div>x;
-    </div>size: 16px;
-       }
     <div class="contact-container">
-        <form action="submit_contact.php" method="POST">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>>
-            <label for="email">Your Email</label>vbar">
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>ing: 8px 16px;
-            <label for="message">Your Message</label>g" alt="Logo">t-size: 16px;e: 16px;
-            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>span class="logo-text">Katora Luxury</span>
-            <input type="submit" value="Send Message">/div>
-        </form>ontact-container {
-    </div>ef="index.html">Home</a></li>
-      <li><a href="Pd.html">Products</a></li>
-    <!-- Footer Section -->"about.html">About</a></li>
-    <footer style="background-color: black; color: white; padding: 20px; text-align: center; margin-top: 40px;">ontact .html">contact</a></li>card img {o">
-        <p>&copy; 2025 Katora Luxury. All rights reserved.</p>
-        <p>Follow us on:</p>
-        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 10px;">
-            <a href="https://facebook.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Facebook</a>
-            <a href="https://twitter.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Twitter</a>ex.html">Home</a></li>
-            <a href="https://instagram.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Instagram</a>
-            <a href="https://linkedin.com/company/katoraluxury" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
-        </div>ts sophistication. We are a luxury brand that specializes in offering exquisite products designed for the discerning individual.nt p {<a href="contact.html">Contact</a></li>
-    </footer>
-</body>>    }/nav>
-</html>            Katora Luxury is a premium brand dedicated to providing high-quality luxury products that combine style, comfort, and elegance. 
-            <p>We provide products that ensure that comfort meets luxury.</p>
-            <a href="Pd.html" class="btn">Shop now</a> 
-        </div>
-    </div>
-    
-
+        <h1>Contact Us</h1>
+        <form class="contact-form" action="submit_contact.php" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+            </div>
+            <input type="submit" value="Send Message">
         </form>
     </div>
 
-    <!-- Footer Section -->
     <footer style="background-color: black; color: white; padding: 20px; text-align: center; margin-top: 40px;">
         <p>&copy; 2025 Katora Luxury. All rights reserved.</p>
         <p>Follow us on:</p>
@@ -249,9 +235,5 @@
             <a href="https://linkedin.com/company/katoraluxury" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
         </div>
     </footer>
-
-
-.
-
 </body>
 </html>

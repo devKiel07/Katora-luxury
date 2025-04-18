@@ -3,310 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Image Example</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to External CSS -->
+    <title>Katora Luxury - Home</title>
     <style>
         body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 20px;
-    background:black; /* Semi-transparent navbar */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-/* Logo Image */
-.logo img {
-    height: 70px; /* Adjust size */
-    width: auto;
-}
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 1px; /* Space between image and text */
-}
-
-.logo-text {
-    color: white;
-    font-size: 20px; /* Adjust font size */
-            font-family: Arial, sans-serif;}
-
-/* Navigation Links */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    display: inline;
-    padding-right: 70PX;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-/* Hover Effect for Navbar Links */
-.nav-links a:hover {
-    color: lightblue;
-}
-
-/* Background container with full-page background */
-.background-container { 100px; /* Space below navbar */
-    position: relative;px;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    background-image: url('PICS/Lb.jpg'); /* Replace with your image */
-    background-size: cover;;
-    background-position: center;
-    background-repeat: no-repeat;
-}           text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
         }
-/* Overlay effect */
-.background-container::before {
-    content: "";lay: grid;
-    position: absolute;te-columns: repeat(3, 1fr); /* Three products per row */
-    top: 0; gap: 20px; /* Space between products */
-    left: 0;margin: 20px 0;
-    width: 100%;ing: 0 20px; /* Padding for the grid */
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-}       .product-card {
-            border: 1px solid #ddd;
-/* Left-aligned but vertically centered text */
-.content {  padding: 10px;
-    position: absolute; center;
-    top: 50%; /* Center vertically */;
-    left: 5%; /* Distance from the left */
-    transform: translateY(-50%); /* Adjusts to perfect vertical center */
-    text-align: left; /* Align text to the left */
-    color: white;: 100%;
-    font-family: Arial, sans-serif;t height as needed */
-    padding: 20px;-fit: cover; /* Maintain aspect ratio */
-}           border-radius: 5px;
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            background: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-sizing: border-box;
         }
-/* Responsive Design for Mobile */
-@media screen and (max-width: 768px) {
-    .content {nt-size: 18px;
-        left: 3%; /* Moves content slightly closer to the left edge */
-    }   }
-    .content h1 {
-        font-size: 30px;{
-    }       font-size: 14px;
-    .content p {r: #555;
-        font-size: 16px;
-    }
-}       .product-card .btn {
-.btn {      display: inline-block;
-    display: inline-block;px;
-    margin-top: 10px;8px 16px;
-    padding: 12px 24px;color: black;
-    background-color: white; /* Default color */
-    color: black;decoration: none;
-    text-decoration: none;x;
-    font-size: 18px;adius: 5px;
-    font-weight: bold;: background-color 0.3s ease;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}       .product-card .btn:hover {
-            background-color: blue;}
-/* Hover Effect (Changes to Blue) */
-.btn:hover {
-    background-color: blue; */
-    color: white; (max-width: 768px) {
-}   .navbar {
-        flex-direction: column;
-/* Responsive Design for Mobile */
-@media screen and (max-width: 768px) {
-    .content { 100%;content {
-        left: 3%; / border-box;        left: 3%; /
-    }
-}
-    .logo {
-/* Mobile Responsive Design */ Mobile Responsive Design */
-@media screen and (max-width: 768px) {-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 10px;
-        position: static;olumn;;
-        width: 100%;   width: 100%;
-        box-sizing: border-box;        gap: 0;
-    }ding: 0;    .logo {
 
-    .logo {
-        margin-bottom: 10px;
-        justify-content: center;i {
-    }mn;
-x 0;
-    .nav-links {: center;   gap: 10px;
-        flex-direction: column; text-align: center;
-        width: 100%;   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        gap: 0;    }
-        padding: 0;
-        margin: 0;ild {        padding-right: 0;
-    }none;lock;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-    .nav-links li {
-        display: block;d-container {
-        padding: 15px 0;      margin-top: 20px;
-        text-align: center;;
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .nav-links a:hover {
-        color: lightblue;    .nav-links li:last-child {
-    }border-bottom: none;
+        .logo img {
+            height: 70px;
+            width: auto;
+        }
 
-    .container, .about-container, .contact-container, .background-container {
-        margin-top: 20px;    .nav-links a {
-        padding: 15px; display: block;
-        max-width: 100%;
-    }   font-size: 18px;
-    }
-    h1 {
-        font-size: 24px;
-    }ue;
+        .logo-text {
+            color: white;
+            font-size: 20px;
+        }
 
-    p {
-        font-size: 16px;out-container, .contact-container, .background-container {
-    }
-        padding: 15px;
-        max-width: 100%;        width: 90%;
-    }columns: 1fr;g: 15px;
-   padding: 10px;
-    h1 {    }
-        font-size: 24px;
-    }     padding: 15px;
-   margin-bottom: 20px;
-    p {    }
-        font-size: 16px;
-    }ction: column;
-;x;
-    .product-grid {   padding: 15px;
-        grid-template-columns: 1fr;   }
-        padding: 10px;
-    } screens */
-d (max-width: 480px) {
-    .product-card {
-        margin-bottom: 20px;
-    }ooter div {
-        flex-direction: column;
-    .content {x;logo-text {
-        width: 90%;16px;
-        padding: 15px;
-    }
-es for very small screens */nav-links a {
-    footer {idth: 480px) {        font-size: 16px;
-        padding: 15px;logo img {
-    }        height: 50px;
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
 
-    footer div {
-        flex-direction: column;logo-text {
-        gap: 10px;        font-size: 16px;
-    }
-}
-nav-links a {
-/* Additional styles for very small screens */        font-size: 16px;
-@media screen and (max-width: 480px) {
-    .logo img {
-        height: 50px;container, .about-container, .contact-container {
-    }        margin: 10px;
+        .nav-links li {
+            display: inline;
+            padding-right: 70px;
+        }
 
-    .logo-text {
-        font-size: 16px;product-card img {
-    }        height: 300px;
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
 
-    .nav-links a {
-        font-size: 16px;: 16px;
-    }   font-size: 24px;
-   }
-    .container, .about-container, .contact-container {
-        margin: 10px; p {   </style>
-    } font-size: 14px;
->
-    .product-card img {
-        height: 300px;go">
-    }> 
+        .nav-links a:hover {
+            color: lightblue;
+        }
 
-    .content h1 {
-        font-size: 24px;
-    }
+        .background-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('PICS/Lb.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: 80px;
+        }
 
-    .content p {
-        font-size: 14px;
-    }s="navbar">
-iv class="logo">
-    .btn {            <img src="PICS/kl.jpg" alt="Logo"> 
-        padding: 8px 16px;            <span class="logo-text">atora luxury</span>
-        font-size: 16px;
-    }>
-}ss Timelessly.</h1>
-eets luxury.</p>
+        .background-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            text-align: left;
+            color: white;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+                position: static;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+                padding: 0;
+                margin: 0;
+            }
+
+            .nav-links li {
+                display: block;
+                padding: 15px 0;
+                text-align: center;
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 5px 0;
+                font-size: 18px;
+            }
+
+            .background-container {
+                margin-top: 0;
+            }
+
+            .content {
+                left: 3%;
+                width: 90%;
+            }
+
+            .content h1 {
+                font-size: 24px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .logo img {
+                height: 50px;
+            }
+
+            .logo-text {
+                font-size: 16px;
+            }
+
+            .nav-links a {
+                font-size: 16px;
+            }
+        }
     </style>
-</head>i><a href="contact.html">Contact</a></li>
-<body>ul>
-    <nav class="navbar"></nav>
-        <div class="logo">     <h1>TOP  PRODUCTS</h1>
-            <img src="PICS/kl.jpg" alt="Logo"> ="section-title">TOP PRODUCTS</div>
-            <span class="logo-text">atora luxury</span>class="product-grid">
-        </div>         <div class="product-card">
-        <ul class="nav-links">/off-shoulder bodycon midi dress.jpg" alt="Product 1">-->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="PICS/kl.jpg" alt="Logo">
+            <span class="logo-text">Katora Luxury</span>
+        </div>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="Pd.html">Products</a></li>rved.</p>
-            <li><a href="about.html">About</a></li>t.html?product=Off-shoulder%20bodycon%20midi%20dress&price=350" class="btn">Buy Now</a>
+            <li><a href="Pd.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>e; text-decoration: none;">Twitter</a>
+    </nav>
 
-kedIn</a>
-    <div class="background-container">a href="payment.html?product=Black%20Jacket%20with%20jeans&price=250" class="btn">Buy Now</a>
-        <div class="content">v>
-            <h1>Live Stylish and  Dress Timelessly.</h1>         <div class="product-card">
-            <p>We provide products that ensure that comfort meets luxury.</p>             <img src="PICS/fashion.jpg" alt="Product 3">
-            <a href="Pd.html" class="btn">Shop now</a>             <h3>Chic belted blazer dress</h3>
-        </div>             <p>$400</p>
-    </div>      <a href="payment.html?product=Chic%20belted%20blazer%20dress&price=400" class="btn">Buy Now</a></body>
-      </div>
-         <div class="product-card">             <img src="PICS/officer wear.jpg" alt="Product 4">             <h3>Satin blouse and high-waisted wide-leg pants outfit</h3>             <p>$500</p>             <a href="payment.html?product=Satin%20blouse%20and%20high-waisted%20wide-leg%20pants%20outfit&price=500" class="btn">Buy Now</a>         </div>         <div class="product-card">            <img src="PICS/Dior.jpg" alt="Product 5">            <h3>Dior hand bag</h3>            <p>$5000</p>            <a href="payment.html?product=Dior%20hand%20bag&price=5000"  class="btn">Buy Now</a>        </div>        <div class="product-card">            <img src="PICS/diamond necklace.jpg" alt="Product 6">            <h3>Diamond Necklace</h3>            <p>$50,000</p>            <a href="payment.html?product=Diamond%20Necklace&price=50000" class="btn">Buy Now</a>        </div>     </div>            <div style="margin: 40px 0;"></div><div class="section-title">NEW ARRIVAL</div><div class="product-grid">    <div class="product-card">        <img src="PICS/White Shirt Maxi Dress with High Slit.jpg" alt="Product 7">        <h3>White Shirt Maxi Dress with High Slit</h3>        <p>$450</p>        <a href="payment.html?product=White%20Shirt%20Maxi%20Dress%20with%20High%20Slit&price=450" class="btn">Buy Now</a>    </div>    <div class="product-card">        <img src="PICS/purple blazer.jpg" alt="Product 8">        <h3>Purple Blazer</h3>        <p>$550</p>        <a href="payment.html?product=Purple%20Blazer&price=550" class="btn">Buy Now</a>    </div>    <div class="product-card">        <img src="PICS/Wide-Leg High-Waisted Pants with Cropped Turtleneck Sweater.jpg" alt="Product 9">        <h3>Wide-Leg High-Waisted Pants with Cropped Turtleneck Sweater</h3>        <p>$520</p>        <a href="payment.html?product=Wide-Leg%20High-Waisted%20Pants%20with%20Cropped%20Turtleneck%20Sweater&price=520" class="btn">Buy Now</a>    </div>    <div class="product-card">        <img src="PICS/g.jpg" alt="Product 10">        <h3>Booho Top with Jeans</h3>        <p>$600</p>        <a href="payment.html?product=Booho%20Top%20with%20Jeans&price=600" class="btn">Buy Now</a>    </div>    <div class="product-card">        <img src="PICS/rolex.jpg" alt="Product 11">        <h3>Rolex</h3>        <p>$80,000</p>        <a href="payment.html?product=Rolex&price=80000" class="btn">Buy Now</a>    </div>    <div class="product-card">        <img src="PICS/omega constelation.jpg" alt="Product 12">        <h3>Omega Constellation Watch</h3>        <p>$60,000</p>        <a href="payment.html?product=Omega%20Constellation%20Watch&price=60000" class="btn">Buy Now</a>    </div>     </div>         </form></div><!-- Footer Section --><footer style="background-color: black; color: white; padding: 20px; text-align: center; margin-top: 40px;">    <p>&copy; 2025 Katora Luxury. All rights reserved.</p>    <p>Follow us on:</p>    <div style="display: flex; justify-content: center; gap: 15px; margin-top: 10px;">        <a href="https://facebook.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Facebook</a>        <a href="https://twitter.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Twitter</a>        <a href="https://instagram.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Instagram</a>        <a href="https://linkedin.com/company/katoraluxury" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
+    <div class="background-container">
+        <div class="content">
+            <h1>Live Stylish and Dress Timelessly.</h1>
+            <p>We provide products that ensure that comfort meets luxury.</p>
+            <a href="Pd.html" class="btn">Shop now</a>
+        </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</html></body>.    </footer>        </div>            <a href="https://linkedin.com/company/katoraluxury" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>            <a href="https://instagram.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Instagram</a>            <a href="https://twitter.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Twitter</a>            <a href="https://facebook.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Facebook</a>        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 10px;">        <p>Follow us on:</p>        <p>&copy; 2025 Katora Luxury. All rights reserved.</p>    <footer style="background-color: black; color: white; padding: 20px; text-align: center; margin-top: 40px;">    <!-- Footer Section -->    </div>        </form>    </div>
-</footer>
-
-
-        
-        </body>
+    <footer style="background-color: black; color: white; padding: 20px; text-align: center; margin-top: 40px;">
+        <p>&copy; 2025 Katora Luxury. All rights reserved.</p>
+        <p>Follow us on:</p>
+        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 10px;">
+            <a href="https://facebook.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Facebook</a>
+            <a href="https://twitter.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Twitter</a>
+            <a href="https://instagram.com/katoraluxury" target="_blank" style="color: white; text-decoration: none;">Instagram</a>
+            <a href="https://linkedin.com/company/katoraluxury" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
+        </div>
+    </footer>
+</body>
 </html>
