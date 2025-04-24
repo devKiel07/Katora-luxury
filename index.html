@@ -3,45 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience premium luxury fashion at Katora Luxury. Discover our exclusive collection of elegant dresses, accessories, and lingerie designed for the discerning individual.">
     <link rel="icon" type="image/jpg" href="PICS/logo.jpg">
     <link rel="shortcut icon" type="image/jpg" href="PICS/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap">
     <title>Katora Luxury - Home</title>
     <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --secondary-gold: #CFB53B;
+            --dark-charcoal: #1a1a1a;
+            --light-charcoal: #2d2d2d;
+            --off-white: #f8f8f8;
+            --light-grey: #e0e0e0;
+            --medium-grey: #888;
+            --soft-black: #0a0a0a;
+            --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #D4AF37 100%);
+            --shadow-subtle: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-strong: 0 10px 40px rgba(0, 0, 0, 0.2);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--soft-black);
+            background-color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 5px 20px;
-            background: black;
+            padding: 0 5%;
+            background: var(--soft-black);
             position: fixed;
             width: 100%;
+            height: 80px;
             top: 0;
             left: 0;
             z-index: 1000;
             box-sizing: border-box;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
         }
 
         .logo img {
-            height: 70px;
+            height: 60px;
             width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
         }
 
         .logo-text {
             color: white;
-            font-size: 20px;
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
 
         .nav-links {
@@ -54,31 +86,50 @@
 
         .nav-links li {
             display: inline;
-            padding-right: 70px;
+            padding-right: 50px;
         }
 
         .nav-links a {
             text-decoration: none;
             color: white;
-            font-size: 18px;
-            transition: color 0.3s ease;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: var(--primary-gold);
+            transition: var(--transition-smooth);
         }
 
         .nav-links a:hover {
-            color: lightblue;
+            color: var(--primary-gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
         .background-container {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        background-image: url('PICS/Lb.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed; /* Makes the background static */
-        margin-top: 0; /* Removes the margin that was causing the issue */
-    }
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('PICS/Lb.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin-top: 0;
+        }
 
         .background-container::before {
             content: "";
@@ -87,55 +138,490 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.4));
         }
 
         .content {
             position: absolute;
             top: 50%;
-            left: 5%;
+            left: 8%;
             transform: translateY(-50%);
             text-align: left;
             color: white;
             padding: 20px;
+            max-width: 600px;
         }
 
         .content h1 {
-            font-size: 30px;
+            font-size: 48px;
+            font-weight: 700;
             margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .content p {
-            font-size: 18px;
-            margin-bottom: 30px;
+            font-size: 20px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            line-height: 1.6;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 24px;
-            background-color: white;
-            color: black;
+            padding: 14px 32px;
+            background: var(--primary-gold);
+            color: var(--soft-black);
             text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            transition: var(--transition-smooth);
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
         }
 
         .btn:hover {
-            background-color: blue;
+            background-color: #fff;
+            color: var(--soft-black);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Ultra-Premium SEO Dashboard Styles */
+        .seo-dashboard {
+            padding: 100px 5%;
+            background-color: var(--off-white);
+            text-align: center;
+            max-width: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .seo-dashboard::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-gold);
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: var(--soft-black);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 3px;
+            background: var(--primary-gold);
+            margin: 15px auto 40px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--medium-grey);
+            max-width: 700px;
+            margin: 0 auto 60px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .seo-metrics {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 70px;
+        }
+
+        .metric-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 40px 30px;
+            width: 230px;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-gold);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .metric-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--primary-gold);
+        }
+
+        .metric-value {
+            font-size: 42px;
+            font-weight: 700;
+            margin: 15px 0;
+            color: var(--dark-charcoal);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .metric-title {
+            font-size: 16px;
+            color: var(--medium-grey);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .metric-change {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            gap: 5px;
+            font-weight: 600;
+        }
+
+        .up {
+            color: #27ae60;
+        }
+
+        .down {
+            color: #e74c3c;
+        }
+
+        .chart-section {
+            margin: 40px auto 80px;
+            max-width: 1200px;
+        }
+
+        .chart-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-subtle);
+            margin: 0 auto;
+            height: 400px;
+            position: relative;
+        }
+
+        .chart-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 10px;
+        }
+
+        .chart-tab {
+            padding: 12px 24px;
+            border: none;
+            background: var(--light-grey);
+            cursor: pointer;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+            color: var(--dark-charcoal);
+        }
+
+        .chart-tab.active {
+            background: var(--primary-gold);
             color: white;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .chart-tab:hover:not(.active) {
+            background: #d8d8d8;
+        }
+
+        .seo-strategies {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .strategy-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 40px 30px;
+            width: 300px;
+            text-align: left;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .strategy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 4px;
+            background: var(--primary-gold);
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .strategy-card h3 {
+            font-size: 22px;
+            color: var(--dark-charcoal);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .strategy-card h3 i {
+            color: var(--primary-gold);
+        }
+
+        .strategy-card p {
+            font-size: 15px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: var(--medium-grey);
+        }
+
+        .strategy-card ul {
+            padding-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            color: var(--medium-grey);
+        }
+
+        .strategy-card ul li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            position: relative;
+            padding-left: 5px;
+        }
+
+        .strategy-card ul li::marker {
+            color: var(--primary-gold);
+        }
+
+        .reviews-section {
+            padding: 80px 5%;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: var(--soft-black);
+            font-weight: 400;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--medium-grey);
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .review-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: left;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-gold);
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .reviewer-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-gold);
+        }
+
+        .reviewer-info h4 {
+            margin: 0;
+            color: var(--dark-charcoal);
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .review-date {
+            font-size: 14px;
+            color: var(--medium-grey);
+        }
+
+        .review-rating {
+            color: var(--primary-gold);
+            font-size: 14px;
+        }
+
+        .review-content {
+            margin-bottom: 20px;
+            color: var(--medium-grey);
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .review-product {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-top: 15px;
+            border-top: 1px solid var(--light-grey);
+        }
+
+        .review-product-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .review-product span {
+            font-size: 14px;
+            color: var(--soft-black);
+            font-weight: 500;
+        }
+
+        .review-btn-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .review-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--primary-gold);
+            color: var(--soft-black);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: var(--transition-smooth);
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .review-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .review-btn.outline {
+            background: transparent;
+            color: var(--soft-black);
+            border: 2px solid var(--primary-gold);
+        }
+
+        .review-btn.outline:hover {
+            background: var(--primary-gold);
+            color: var(--soft-black);
+        }
+
+        @media screen and (max-width: 1024px) {
+            .reviews-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .section-title {
+                font-size: 32px;
+            }
+
+            .section-subtitle {
+                font-size: 16px;
+                margin-bottom: 50px;
+            }
+
+            .chart-container {
+                height: 350px;
+                padding: 30px;
+            }
         }
 
         @media screen and (max-width: 768px) {
             .navbar {
+                padding: 0 20px;
+                height: auto;
                 flex-direction: column;
-                padding: 10px;
                 position: static;
             }
 
             .logo {
-                margin-bottom: 10px;
+                margin: 15px 0;
             }
 
             .nav-links {
@@ -156,34 +642,80 @@
 
             .nav-links li:last-child {
                 border-bottom: none;
+                padding-bottom: 20px;
             }
 
             .nav-links a {
                 display: block;
                 padding: 5px 0;
-                font-size: 18px;
-            }
-
-            .background-container {
-                margin-top: 0;
+                font-size: 16px;
             }
 
             .content {
-                left: 3%;
+                left: 5%;
                 width: 90%;
             }
 
             .content h1 {
-                font-size: 24px;
+                font-size: 36px;
             }
 
             .content p {
-                font-size: 16px;
+                font-size: 18px;
+                margin-bottom: 30px;
             }
 
             .btn {
-                padding: 8px 16px;
-                font-size: 16px;
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+
+            .seo-dashboard {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section-subtitle {
+                font-size: 15px;
+                margin-bottom: 40px;
+            }
+
+            .seo-metrics {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+                margin-bottom: 50px;
+            }
+
+            .metric-card {
+                width: 90%;
+                max-width: 280px;
+                padding: 30px 20px;
+            }
+
+            .strategy-card {
+                width: 90%;
+                max-width: 300px;
+                padding: 30px 20px;
+            }
+
+            .chart-container {
+                height: 300px;
+                padding: 20px;
+            }
+
+            .chart-tabs {
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+            
+            .chart-tab {
+                padding: 10px 20px;
+                font-size: 13px;
             }
         }
 
@@ -193,11 +725,39 @@
             }
 
             .logo-text {
+                font-size: 18px;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+
+            .content p {
                 font-size: 16px;
             }
 
-            .nav-links a {
-                font-size: 16px;
+            .section-title {
+                font-size: 24px;
+            }
+
+            .section-subtitle {
+                font-size: 14px;
+            }
+            
+            .metric-value {
+                font-size: 36px;
+            }
+            
+            .metric-title {
+                font-size: 14px;
+            }
+            
+            .chart-container {
+                height: 250px;
+            }
+            
+            .strategy-card h3 {
+                font-size: 18px;
             }
         }
     </style>
@@ -205,7 +765,7 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="PICS/logo.jpg" alt="Logo">
+            <img src="PICS/logo.jpg" alt="Katora Luxury Logo">
             <span class="logo-text">Katora Luxury</span>
         </div>
         <ul class="nav-links">
@@ -219,12 +779,574 @@
 
     <div class="background-container">
         <div class="content">
-            <h1>Live Stylish and Dress Timelessly.</h1>
-            <p>We provide products that ensure that comfort meets luxury.</p>
-            <a href="Pd.html" class="btn">Shop now</a>
+            <h1>Live Stylish and Dress Timelessly</h1>
+            <p>Experience unparalleled craftsmanship where comfort meets luxury. Our exclusive collections redefine modern elegance for the discerning individual.</p>
+            <a href="Pd.html" class="btn">Explore Collection</a>
         </div>
     </div>
 
-   
+    <!-- Ultra-Premium SEO Dashboard Section -->
+    <section class="seo-dashboard">
+        <h2 class="section-title">Performance Analytics</h2>
+        <p class="section-subtitle">Transparent insights into our digital growth and customer engagement metrics showcasing our commitment to excellence and continuous improvement.</p>
+        
+        <div class="seo-metrics">
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="metric-value">5,428</div>
+                <div class="metric-title">Monthly Visitors</div>
+                <div class="metric-change up">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>42% vs last month</span>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="metric-value">82%</div>
+                <div class="metric-title">Organic Traffic</div>
+                <div class="metric-change up">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>15% vs last month</span>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="metric-value">3:24</div>
+                <div class="metric-title">Avg. Time on Page</div>
+                <div class="metric-change up">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>22% vs last month</span>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="metric-value">3.8%</div>
+                <div class="metric-title">Conversion Rate</div>
+                <div class="metric-change up">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>0.5% vs last month</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-section">
+            <div class="chart-container">
+                <div class="chart-tabs">
+                    <button class="chart-tab active">6 Months</button>
+                    <button class="chart-tab">3 Months</button>
+                    <button class="chart-tab">30 Days</button>
+                    <button class="chart-tab">7 Days</button>
+                </div>
+                <canvas id="trafficChart"></canvas>
+            </div>
+        </div>
+        
+        <div class="seo-strategies">
+            <div class="strategy-card">
+                <h3><i class="fas fa-file-alt"></i> On-Page Optimization</h3>
+                <p>Strategic enhancements to elevate user experience and digital visibility.</p>
+                <ul>
+                    <li>Premium content structure with semantic markup (+38% CTR)</li>
+                    <li>Advanced speed optimization cutting load time by 45%</li>
+                    <li>Targeted keyword integration with voice search optimization</li>
+                    <li>High-resolution imagery with AI-enhanced alt text</li>
+                </ul>
+            </div>
+            
+            <div class="strategy-card">
+                <h3><i class="fas fa-link"></i> Brand Authority Building</h3>
+                <p>Cultivating prestigious connections across the luxury fashion ecosystem.</p>
+                <ul>
+                    <li>52 curated partnerships with leading fashion authorities</li>
+                    <li>Domain authority growth of 18% quarter-over-quarter</li>
+                    <li>Social engagement amplification by 65% year-to-date</li>
+                    <li>Featured in 3 international luxury publications</li>
+                </ul>
+            </div>
+            
+            <div class="strategy-card">
+                <h3><i class="fas fa-mobile-alt"></i> Technical Excellence</h3>
+                <p>State-of-the-art infrastructure delivering flawless digital experiences.</p>
+                <ul>
+                    <li>Mobile experience score improved to 92/100</li>
+                    <li>Rich structured data implementation with JSON-LD</li>
+                    <li>Dynamic XML sitemap with priority mapping</li>
+                    <li>Complete technical audit with 100% resolved issues</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews-section">
+        <h2 class="section-title">Customer Reviews</h2>
+        <p class="section-subtitle">See what our valued customers are saying about their Katora Luxury experience.</p>
+        
+        <div class="reviews-container">
+            <div class="review-card" itemscope itemtype="https://schema.org/Review">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <img src="PICS/g.jpg" alt="Customer Photo" class="reviewer-img">
+                        <div>
+                            <h4 itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Sarah K.</span></h4>
+                            <div class="review-date" itemprop="datePublished" content="2025-03-15">March 15, 2025</div>
+                        </div>
+                    </div>
+                    <div class="review-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="worstRating" content="1">
+                        <meta itemprop="bestRating" content="5">
+                        <span itemprop="ratingValue" content="5">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p itemprop="reviewBody">"The quality of my dress exceeded all expectations! The fabric feels luxurious against the skin, and the fit is absolutely perfect. I've received so many compliments. Katora Luxury has become my go-to for special occasion outfits."</p>
+                    <meta itemprop="itemReviewed" content="Elegant Red Dress">
+                </div>
+                <div class="review-product">
+                    <img src="PICS/product1.jpg" alt="Product" class="review-product-img">
+                    <span>Elegant Red Dress</span>
+                </div>
+            </div>
+            
+            <div class="review-card" itemscope itemtype="https://schema.org/Review">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <img src="PICS/fashion.jpg" alt="Customer Photo" class="reviewer-img">
+                        <div>
+                            <h4 itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">James T.</span></h4>
+                            <div class="review-date" itemprop="datePublished" content="2025-04-02">April 2, 2025</div>
+                        </div>
+                    </div>
+                    <div class="review-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="worstRating" content="1">
+                        <meta itemprop="bestRating" content="5">
+                        <span itemprop="ratingValue" content="5">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p itemprop="reviewBody">"I purchased a gift for my wife from Katora Luxury and was impressed with the attention to detail in packaging and presentation. The quality of the lingerie set was exceptional, and the delivery was prompt. Excellent service!"</p>
+                    <meta itemprop="itemReviewed" content="Premium Lingerie Set">
+                </div>
+                <div class="review-product">
+                    <img src="PICS/product6.png" alt="Product" class="review-product-img">
+                    <span>Premium Lingerie Set</span>
+                </div>
+            </div>
+            
+            <div class="review-card" itemscope itemtype="https://schema.org/Review">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <img src="PICS/Dior.jpg" alt="Customer Photo" class="reviewer-img">
+                        <div>
+                            <h4 itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Michelle O.</span></h4>
+                            <div class="review-date" itemprop="datePublished" content="2025-03-27">March 27, 2025</div>
+                        </div>
+                    </div>
+                    <div class="review-rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="worstRating" content="1">
+                        <meta itemprop="bestRating" content="5">
+                        <span itemprop="ratingValue" content="4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <p itemprop="reviewBody">"I love my new Black-White Dress! The design is modern yet timeless, and it fits beautifully. The only reason for 4 stars instead of 5 is that delivery took a bit longer than expected, but the quality of the product makes up for it."</p>
+                    <meta itemprop="itemReviewed" content="Black-White Dress">
+                </div>
+                <div class="review-product">
+                    <img src="PICS/GHC250BLACK WHITESIZE 6-8.jpg" alt="Product" class="review-product-img">
+                    <span>Black-White Dress</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="review-btn-container">
+            <a href="write-review.html" class="review-btn">Write a Review</a>
+            <a href="#" class="review-btn outline">View All Reviews</a>
+        </div>
+        
+        <!-- Dynamic Reviews Container -->
+        <h3 style="margin-top: 60px;">Recent Customer Submissions</h3>
+        <div id="customer-reviews-container" class="reviews-container"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Katora Luxury. All rights reserved.</p>
+        <p>Exclusive Boutique: ASHALEY BOTWE, Ghana</p>
+        <p>Premium Delivery Service Available</p>
+        <p>Connect with us:</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/kharen.mhartey/" target="_blank" rel="noopener" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/katora_luxury/" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/+233595304048" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="js/reviews.js"></script>
+    <script>
+        // Luxury traffic chart with enhanced styling
+        const ctx = document.getElementById('trafficChart').getContext('2d');
+        
+        // Create gold gradient for primary dataset
+        const goldGradient = ctx.createLinearGradient(0, 0, 0, 400);
+        goldGradient.addColorStop(0, 'rgba(212, 175, 55, 0.6)');
+        goldGradient.addColorStop(1, 'rgba(212, 175, 55, 0.1)');
+        
+        // Create green gradient for secondary dataset
+        const greenGradient = ctx.createLinearGradient(0, 0, 0, 400);
+        greenGradient.addColorStop(0, 'rgba(39, 174, 96, 0.6)');
+        greenGradient.addColorStop(1, 'rgba(39, 174, 96, 0.1)');
+        
+        const trafficChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
+                datasets: [
+                    {
+                        label: 'Organic Traffic',
+                        data: [1280, 1850, 2340, 3100, 4250, 4460],
+                        borderColor: '#D4AF37',
+                        borderWidth: 3,
+                        backgroundColor: goldGradient,
+                        tension: 0.4,
+                        fill: true,
+                        pointBackgroundColor: '#D4AF37',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 5,
+                        pointHoverRadius: 8
+                    },
+                    {
+                        label: 'Direct Traffic',
+                        data: [520, 680, 750, 820, 940, 968],
+                        borderColor: '#27ae60',
+                        borderWidth: 3,
+                        backgroundColor: greenGradient,
+                        tension: 0.4,
+                        fill: true,
+                        pointBackgroundColor: '#27ae60',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 5,
+                        pointHoverRadius: 8
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            boxWidth: 15,
+                            usePointStyle: true,
+                            pointStyle: 'circle',
+                            padding: 20,
+                            font: {
+                                size: 14,
+                                family: "'Montserrat', sans-serif"
+                            }
+                        }
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                        backgroundColor: 'rgba(26, 26, 26, 0.9)',
+                        titleFont: {
+                            size: 16,
+                            family: "'Montserrat', sans-serif",
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 14,
+                            family: "'Montserrat', sans-serif"
+                        },
+                        padding: 12,
+                        cornerRadius: 6,
+                        displayColors: true,
+                        usePointStyle: true,
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            display: true,
+                            color: 'rgba(200, 200, 200, 0.2)',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            font: {
+                                family: "'Montserrat', sans-serif",
+                                size: 12
+                            },
+                            color: '#888',
+                            padding: 10
+                        },
+                        title: {
+                            display: true,
+                            text: 'Visitors',
+                            font: {
+                                family: "'Montserrat', sans-serif",
+                                size: 14,
+                                weight: 'bold'
+                            },
+                            color: '#555',
+                            padding: {top: 0, bottom: 10}
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false,
+                            drawBorder: false
+                        },
+                        ticks: {
+                            font: {
+                                family: "'Montserrat', sans-serif",
+                                size: 12
+                            },
+                            color: '#888',
+                            padding: 10
+                        },
+                        title: {
+                            display: true,
+                            text: '2025',
+                            font: {
+                                family: "'Montserrat', sans-serif",
+                                size: 14,
+                                weight: 'bold'
+                            },
+                            color: '#555',
+                            padding: {top: 10, bottom: 0}
+                        }
+                    }
+                },
+                elements: {
+                    line: {
+                        borderWidth: 3
+                    }
+                },
+                interaction: {
+                    mode: 'nearest',
+                    axis: 'x',
+                    intersect: false
+                },
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutQuart'
+                }
+            }
+        });
+
+        // Enhanced tab functionality with smooth transitions
+        const chartTabs = document.querySelectorAll('.chart-tab');
+        chartTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                chartTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Prepare datasets based on timeframe selection with animation
+                let newData;
+                if (tab.textContent === '30 Days') {
+                    newData = {
+                        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                        datasets: [
+                            {
+                                label: 'Organic Traffic',
+                                data: [980, 1150, 1240, 1090],
+                                borderColor: '#D4AF37',
+                                borderWidth: 3,
+                                backgroundColor: goldGradient,
+                                tension: 0.4,
+                                fill: true,
+                                pointBackgroundColor: '#D4AF37',
+                                pointBorderColor: '#fff',
+                                pointBorderWidth: 2,
+                                pointRadius: 5,
+                                pointHoverRadius: 8
+                            },
+                            {
+                                label: 'Direct Traffic',
+                                data: [310, 340, 380, 325],
+                                borderColor: '#27ae60',
+                                borderWidth: 3,
+                                backgroundColor: greenGradient,
+                                tension: 0.4,
+                                fill: true,
+                                pointBackgroundColor: '#27ae60',
+                                pointBorderColor: '#fff',
+                                pointBorderWidth: 2,
+                                pointRadius: 5,
+                                pointHoverRadius: 8
+                            }
+                        ]
+                    };
+                } else if (tab.textContent === '7 Days') {
+                    newData = {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        datasets: [
+                            {
+                                label: 'Organic Traffic',
+                                data: [140, 165, 185, 172, 195, 210, 188],
+                                borderColor: '#D4AF37',
+                                borderWidth: 3,
+                                backgroundColor: goldGradient,
+                                tension: 0.4,
+                                fill: true,
+                                pointBackgroundColor: '#D4AF37',
+                                pointBorderColor: '#fff',
+                                pointBorderWidth: 2,
+                                pointRadius: 5,
+                                pointHoverRadius: 8
+                            },
+                            {
+                                label: 'Direct Traffic',
+                                data: [45, 55, 60, 52, 65, 75, 60],
+                                borderColor: '#27ae60',
+                                borderWidth: 3,
+                                backgroundColor: greenGradient,
+                                tension: 0.4,
+                                fill: true,
+                                pointBackgroundColor: '#27ae60',
+                                pointBorderColor: '#fff',
+                                pointBorderWidth: 2,
+                                pointRadius: 5,
+                                pointHoverRadius: 8
+                            }
+                        ]
+                    };
+                } else if (tab.textContent === '3 Months') {
+                    newData = {
+                        labels: ['Feb', 'Mar', 'Apr'],
+                        datasets: [
+                            {
+                                label: 'Organic Traffic',
+                                data: [3100, 4250, 4460],
+                                borderColor: '#D4AF37',
+                                borderWidth: 3,
+                                backgroundColor: goldGradient,
+                                tension: 0.4,
+                                fill: true,
+                                pointBackgroundColor: '#D4AF37',
+                                pointBorderColor: '#fff',
+                                pointBorderWidth: 2,
+                                pointRadius: 5,
+                                pointHoverRadius: 8
+                            },
+                            {
+                                label: 'Direct Traffic',
+                                data: [820, 940, 968],
+                                borderColor: '#27ae60',
+                                borderWidth: 3,
+                                backgroundColor: greenGradient,
+                                tension: 0.4,
+                                fill: true,
+                                pointBackgroundColor: '#27ae60',
+                                pointBorderColor: '#fff',
+                                pointBorderWidth: 2,
+                                pointRadius: 5,
+                                pointHoverRadius: 8
+                            }
+                        ]
+                    };
+                } else {
+                    newData = {
+                        labels: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
+                        datasets: [
+                            {
+                                label: 'Organic Traffic',
+                                data: [1280, 1850, 2340, 3100, 4250, 4460],
+                                borderColor: '#D4AF37',
+                                borderWidth: 3,
+                                backgroundColor: goldGradient,
+                                tension: 0.4,
+                                fill: true,
+                                pointBackgroundColor: '#D4AF37',
+                                pointBorderColor: '#fff',
+                                pointBorderWidth: 2,
+                                pointRadius: 5,
+                                pointHoverRadius: 8
+                            },
+                            {
+                                label: 'Direct Traffic',
+                                data: [520, 680, 750, 820, 940, 968],
+                                borderColor: '#27ae60',
+                                borderWidth: 3,
+                                backgroundColor: greenGradient,
+                                tension: 0.4,
+                                fill: true,
+                                pointBackgroundColor: '#27ae60',
+                                pointBorderColor: '#fff',
+                                pointBorderWidth: 2,
+                                pointRadius: 5,
+                                pointHoverRadius: 8
+                            }
+                        ]
+                    };
+                }
+
+                // Update chart with new data and animate
+                trafficChart.data.labels = newData.labels;
+                trafficChart.data.datasets = newData.datasets;
+                trafficChart.update({
+                    duration: 800,
+                    easing: 'easeOutQuart'
+                });
+            });
+        });
+
+        // Initialize responsive behavior for mobile menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            const logo = document.querySelector('.logo');
+            
+            // Add scroll effect to navbar
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.style.height = '70px';
+                    logo.querySelector('img').style.height = '50px';
+                } else {
+                    navbar.style.height = '80px';
+                    logo.querySelector('img').style.height = '60px';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -3,31 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Stay updated with Katora Luxury's latest fashion collections, style tips, and exclusive offers through our Instagram feed.">
-    <meta name="keywords" content="Katora Luxury, fashion, Ghana fashion, luxury clothing, Instagram feed, style updates">
+    <meta name="description" content="Explore Katora Luxury's fashion blog with style guides, trend alerts, and fashion insights. Discover the latest in luxury fashion, accessories, and elegant dressing tips.">
+    <title>Fashion Feed - Katora Luxury</title>
     <link rel="icon" type="image/jpg" href="PICS/logo.jpg">
     <link rel="shortcut icon" type="image/jpg" href="PICS/logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Instagram Feed - Katora Luxury</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap">
     <style>
-        /* Reuse the same navbar and footer styles */
+        :root {
+            --primary-gold: #D4AF37;
+            --secondary-gold: #CFB53B;
+            --dark-charcoal: #1a1a1a;
+            --light-charcoal: #2d2d2d;
+            --off-white: #f8f8f8;
+            --light-grey: #e0e0e0;
+            --medium-grey: #888;
+            --soft-black: #0a0a0a;
+            --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #D4AF37 100%);
+            --shadow-subtle: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-strong: 0 10px 40px rgba(0, 0, 0, 0.2);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #ffffff;
-            color: #333;
-            line-height: 1.6;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            color: var(--soft-black);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 5px 20px;
-            background: black;
+            padding: 0 5%;
+            background: var(--soft-black);
             position: fixed;
             width: 100%;
+            height: 80px;
             top: 0;
             left: 0;
             z-index: 1000;
@@ -38,19 +59,24 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
         }
 
         .logo img {
-            height: 70px;
+            height: 60px;
             width: auto;
-            transition: transform 0.3s ease;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+            transition: var(--transition-smooth);
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
         }
 
         .logo-text {
             color: white;
-            font-size: 20px;
-            font-weight: 300;
+            font-size: 22px;
+            font-weight: 600;
             letter-spacing: 1px;
         }
 
@@ -64,107 +90,312 @@
 
         .nav-links li {
             display: inline;
-            padding-right: 70px;
+            padding-right: 50px;
         }
 
         .nav-links a {
             text-decoration: none;
             color: white;
-            font-size: 18px;
-            transition: all 0.3s ease;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition-smooth);
             position: relative;
         }
 
-        .nav-links a:after {
+        .nav-links a::after {
             content: '';
             position: absolute;
             width: 0;
             height: 2px;
-            bottom: -5px;
+            bottom: -4px;
             left: 0;
-            background-color: white;
-            transition: width 0.3s ease;
+            background: var(--primary-gold);
+            transition: var(--transition-smooth);
         }
 
-        .nav-links a:hover:after {
+        .nav-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        .nav-links a:hover::after {
             width: 100%;
         }
 
-        /* Feed specific styles */
         .feed-container {
             margin-top: 120px;
-            padding: 20px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+            padding: 30px 5%;
         }
 
-        .feed-header {
+        .feed-title {
             text-align: center;
             margin-bottom: 40px;
-        }
-
-        .feed-header h1 {
-            font-size: 2.5em;
-            font-weight: 300;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-
-        .instagram-feed {
-            margin-top: 30px;
-            text-align: center;
             position: relative;
-            width: 100%;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
+            padding-bottom: 15px;
         }
 
-        .lightwidget-widget {
-            width: 100%;
-            border: none;
-            overflow: hidden;
-            background: transparent;
+        .feed-title h1 {
+            font-size: 36px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: var(--dark-charcoal);
+        }
+
+        .feed-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-gold);
+            margin: 15px auto;
+        }
+
+        .feed-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        footer {
-            background-color: black;
+        .feed-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+            position: relative;
+            text-decoration: none;
+            color: var(--soft-black);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feed-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .feed-image {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .feed-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .feed-item:hover .feed-image img {
+            transform: scale(1.1);
+        }
+
+        .feed-category {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--primary-gold);
             color: white;
-            padding: 30px 20px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            z-index: 10;
+        }
+
+        .feed-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid var(--primary-gold);
+            position: relative;
+        }
+
+        .feed-content::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-image: var(--gradient-gold);
+            z-index: 2;
+        }
+
+        .feed-title-text {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: var(--dark-charcoal);
+            line-height: 1.4;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
+        }
+
+        .feed-description {
+            color: var(--medium-grey);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .feed-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--medium-grey);
+            margin-top: auto;
+            border-top: 1px solid var(--light-grey);
+            padding-top: 15px;
+        }
+
+        .feed-author {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feed-author img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .feed-time {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .feed-time i {
+            color: var(--primary-gold);
+        }
+
+        footer {
+            background-color: var(--soft-black);
+            color: white;
+            padding: 60px 5%;
             text-align: center;
             margin-top: 60px;
         }
 
         footer p {
             margin: 10px 0;
-            font-weight: 300;
-            letter-spacing: 1px;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        footer p:first-of-type {
+            color: var(--primary-gold);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: var(--transition-smooth);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-gold);
+            color: var(--soft-black);
+            transform: translateY(-5px);
+        }
+
+        @media screen and (max-width: 1024px) {
+            .feed-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media screen and (max-width: 768px) {
             .navbar {
                 flex-direction: column;
                 padding: 10px;
+                position: static;
+                height: auto;
+            }
+
+            .logo {
+                margin-bottom: 10px;
             }
 
             .nav-links {
                 flex-direction: column;
                 width: 100%;
-                text-align: center;
+                gap: 0;
             }
 
             .nav-links li {
-                padding: 10px 0;
+                padding: 15px 0;
+                text-align: center;
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             }
 
-            .instagram-feed {
-                padding: 0 15px;
+            .feed-title h1 {
+                font-size: 28px;
+            }
+
+            .feed-grid {
+                grid-template-columns: 1fr;
             }
             
-            .lightwidget-widget {
-                height: auto !important;
+            .feed-container {
+                margin-top: 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .logo img {
+                height: 50px;
+            }
+
+            .logo-text {
+                font-size: 16px;
+            }
+
+            .feed-title h1 {
+                font-size: 24px;
+            }
+
+            .feed-content {
+                padding: 20px;
+            }
+
+            .feed-title-text {
+                font-size: 18px;
+            }
+
+            .feed-description {
+                font-size: 14px;
             }
         }
     </style>
@@ -172,42 +403,184 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="PICS/logo.jpg" alt="Logo">
+            <img src="PICS/logo.jpg" alt="Katora Luxury Logo">
             <span class="logo-text">Katora Luxury</span>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="Pd.html">Products</a></li>
-            <li><a href="about.html">About</a></li>
             <li><a href="feed.html">Feed</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <div class="feed-container">
-        <div class="feed-header">
-            <h1>Latest Updates</h1>
-            <p>Stay connected with our latest styles and collections</p>
+        <div class="feed-title">
+            <h1>Fashion Insights</h1>
         </div>
-        <div class="instagram-feed">
-            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-            <iframe src="https://cdn.lightwidget.com/widgets/YOUR_INSTAGRAM_WIDGET_ID.html" 
-                    scrolling="no" 
-                    allowtransparency="true" 
-                    class="lightwidget-widget" 
-                    style="width: 100%; border: 0; overflow: hidden; height: 0;"
-                    onload="this.style.height = this.contentWindow.document.body.scrollHeight + 'px'">
-            </iframe>
+        <div class="feed-grid">
+            <div class="feed-item">
+                <div class="feed-image">
+                    <span class="feed-category">Style Guide</span>
+                    <img src="PICS/plaid jacket and  jeans.jpg" alt="Plaid jacket styled with dark denim jeans - contemporary fashion pairing by Katora Luxury">
+                </div>
+                <div class="feed-content">
+                    <h2 class="feed-title-text">The Art of Pairing Plaid Jackets with Jeans</h2>
+                    <p class="feed-description">
+                        Discover the timeless elegance of combining structured plaid jackets with your favorite denim. 
+                        This versatile combination works for both casual outings and semi-formal events.
+                    </p>
+                    <div class="feed-meta">
+                        <div class="feed-author">
+                            <img src="PICS/logo.jpg" alt="Katora Style Team author profile image">
+                            <span>Katora Style Team</span>
+                        </div>
+                        <div class="feed-time">
+                            <i class="far fa-clock"></i>
+                            <span>April 21, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-item">
+                <div class="feed-image">
+                    <span class="feed-category">Trend Alert</span>
+                    <img src="PICS/long sleeves top with jeans.jpg" alt="Statement long sleeve top paired with fitted jeans - seasonal fashion trend from Katora Luxury collection">
+                </div>
+                <div class="feed-content">
+                    <h2 class="feed-title-text">Elevating Everyday Looks with Statement Sleeves</h2>
+                    <p class="feed-description">
+                        Long-sleeved tops are having a moment this season, especially when paired with classic denim. 
+                        Learn how to style this combination for maximum impact with minimal effort.
+                    </p>
+                    <div class="feed-meta">
+                        <div class="feed-author">
+                            <img src="PICS/logo.jpg" alt="Katora Style Team author profile image">
+                            <span>Katora Style Team</span>
+                        </div>
+                        <div class="feed-time">
+                            <i class="far fa-clock"></i>
+                            <span>April 18, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-item">
+                <div class="feed-image">
+                    <span class="feed-category">Luxury</span>
+                    <img src="PICS/diamond necklace.jpg" alt="Elegant diamond statement necklace with brilliant cut stones - premium jewelry piece from Katora Luxury accessories">
+                </div>
+                <div class="feed-content">
+                    <h2 class="feed-title-text">The Enduring Allure of Diamond Jewelry</h2>
+                    <p class="feed-description">
+                        Explore our curated collection of timeless diamond pieces that add sophistication to any outfit. 
+                        From elegant necklaces to statement earrings, discover the perfect accessory.
+                    </p>
+                    <div class="feed-meta">
+                        <div class="feed-author">
+                            <img src="PICS/logo.jpg" alt="Katora Accessories team author profile image">
+                            <span>Katora Accessories</span>
+                        </div>
+                        <div class="feed-time">
+                            <i class="far fa-clock"></i>
+                            <span>April 15, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-item">
+                <div class="feed-image">
+                    <span class="feed-category">Accessories</span>
+                    <img src="PICS/rolex.jpg" alt="Premium luxury timepiece with gold details and precision craftsmanship - investment watch featured by Katora Luxury">
+                </div>
+                <div class="feed-content">
+                    <h2 class="feed-title-text">Timeless Elegance: Investing in Luxury Timepieces</h2>
+                    <p class="feed-description">
+                        A luxury watch is more than just a timekeeping device; it's a statement of personal style and accomplishment. 
+                        Discover our guide to selecting the perfect timepiece for your collection.
+                    </p>
+                    <div class="feed-meta">
+                        <div class="feed-author">
+                            <img src="PICS/logo.jpg" alt="Katora Luxury accessories specialist author profile image">
+                            <span>Katora Luxury</span>
+                        </div>
+                        <div class="feed-time">
+                            <i class="far fa-clock"></i>
+                            <span>April 10, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-item">
+                <div class="feed-image">
+                    <span class="feed-category">Fashion</span>
+                    <img src="PICS/off-shoulder bodycon midi dress.jpg" alt="Fitted off-shoulder bodycon midi dress in elegant black - figure-flattering silhouette from Katora Luxury collection">
+                </div>
+                <div class="feed-content">
+                    <h2 class="feed-title-text">The Perfect Silhouette: Off-Shoulder Bodycon Dresses</h2>
+                    <p class="feed-description">
+                        Off-shoulder bodycon midi dresses combine elegance with contemporary style. 
+                        From evening events to special occasions, this versatile piece should be in every fashion enthusiast's wardrobe.
+                    </p>
+                    <div class="feed-meta">
+                        <div class="feed-author">
+                            <img src="PICS/logo.jpg" alt="Katora Style Team author profile image">
+                            <span>Katora Style Team</span>
+                        </div>
+                        <div class="feed-time">
+                            <i class="far fa-clock"></i>
+                            <span>April 5, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-item">
+                <div class="feed-image">
+                    <span class="feed-category">Style Guide</span>
+                    <img src="PICS/White Shirt Maxi Dress with High Slit.jpg" alt="Flowing white maxi shirt dress with elegant high slit - summer luxury fashion by Katora Luxury">
+                </div>
+                <div class="feed-content">
+                    <h2 class="feed-title-text">Summer Sophistication: The White Shirt Maxi Dress</h2>
+                    <p class="feed-description">
+                        A white shirt maxi dress with a high slit embodies summer elegance. 
+                        Perfect for beach vacations, garden parties, or upscale weekend brunches, this piece offers effortless sophistication.
+                    </p>
+                    <div class="feed-meta">
+                        <div class="feed-author">
+                            <img src="PICS/logo.jpg" alt="Katora Fashion editor author profile image">
+                            <span>Katora Fashion</span>
+                        </div>
+                        <div class="feed-time">
+                            <i class="far fa-clock"></i>
+                            <span>March 28, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2025 Katora Luxury. All rights reserved.</p>
-        <p>Visit Us In-Store: ASHALEY BOTWE, Ghana</p>
-        <p>Delivery at a fee</p>
-        <p style="margin-top: 20px; font-size: 14px;">
-            <a href="https://devkiel07.github.io/katora-luxury/" target="_blank" rel="noopener" style="color: white; text-decoration: underline; opacity: 0.8; transition: opacity 0.3s ease;">Live Stylish and Dress Timelessly</a>
-        </p>
+        <p>Premium Boutique: ASHALEY BOTWE, Ghana</p>
+        <p>Delivery available at a fee</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/kharen.mhartey/" target="_blank" rel="noopener" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/katora_luxury/" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/+233595304048" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
     </footer>
 </body>
-</html> 
+</html>
