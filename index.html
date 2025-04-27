@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#D4AF37">
-    <link rel="icon" href="PICS/icon.jpg" type="image/x-icon">
-    <meta name="description" content="Experience premium luxury fashion at LINKECA ROYAL ENTERPRISE. Discover our exclusive collection of elegant dresses, accessories, and lingerie designed for the discerning individual.">
-
+    <meta name="description" content="LINKECA ROYAL ENTERPRISE - Premium fashion boutique in Madina Rawling Circle, Ghana. Designer clothing, accessories, and luxury goods.">
+    <link rel="icon" type="image/jpg" href="PICS/logo.jpg">
+    <link rel="shortcut icon" type="image/jpg" href="PICS/logo.jpg">
+    <title>LINKECA ROYAL ENTERPRISE - Premium Fashion Boutique</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>LINKECA ROYAL ENTERPRISE - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         :root {
             --primary-gold: #D4AF37;
@@ -763,9 +762,328 @@
                 font-size: 18px;
             }
         }
+
+        /* About Preview Section */
+        .about-preview {
+            padding: 100px 5%;
+            background-color: #fff;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .about-preview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('PICS/background.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        .about-preview h2 {
+            font-size: 36px;
+            color: var(--dark-charcoal);
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about-preview h2::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 3px;
+            background: var(--primary-gold);
+            margin: 15px auto 0;
+        }
+
+        .about-preview p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--medium-grey);
+            max-width: 800px;
+            margin: 0 auto 25px;
+        }
+
+        .btn-learn {
+            display: inline-block;
+            padding: 14px 32px;
+            margin-top: 20px;
+            background: transparent;
+            color: var(--dark-charcoal);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            transition: var(--transition-smooth);
+            text-transform: uppercase;
+            border: 2px solid var(--primary-gold);
+        }
+
+        .btn-learn:hover {
+            background-color: var(--primary-gold);
+            color: var(--soft-black);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 5%;
+            background-color: var(--light-charcoal);
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-gold);
+        }
+
+        .testimonials h2 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .testimonials h2::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 3px;
+            background: var(--primary-gold);
+            margin: 15px auto 0;
+        }
+
+        .testimonial-slider {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-slide {
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+        }
+
+        .testimonial {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: left;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+            position: relative;
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .testimonial:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .testimonial p {
+            font-size: 16px;
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+
+        .testimonial h3 {
+            font-size: 16px;
+            color: var(--primary-gold);
+            text-align: right;
+            font-weight: 500;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            padding: 80px 5%;
+            background-color: var(--off-white);
+            text-align: center;
+            position: relative;
+        }
+
+        .newsletter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-gold);
+        }
+
+        .newsletter h2 {
+            font-size: 32px;
+            color: var(--dark-charcoal);
+            margin-bottom: 20px;
+        }
+
+        .newsletter p {
+            font-size: 18px;
+            color: var(--medium-grey);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: var(--shadow-subtle);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 16px 20px;
+            border: none;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            padding: 0 30px;
+            background: var(--primary-gold);
+            color: var(--soft-black);
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--secondary-gold);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--soft-black);
+            color: #fff;
+            padding: 50px 5% 30px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: var(--light-grey);
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .socials a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
+
+        .socials a:hover {
+            background-color: var(--primary-gold);
+            color: var(--soft-black);
+            transform: translateY(-3px);
+        }
+
+        @media screen and (max-width: 768px) {
+            .about-preview p,
+            .testimonial p,
+            .newsletter p {
+                font-size: 16px;
+            }
+
+            .about-preview h2,
+            .testimonials h2,
+            .newsletter h2 {
+                font-size: 28px;
+            }
+
+            .testimonial-slider {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .testimonial-slide {
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 20px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .newsletter-form input,
+            .newsletter-form button {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .socials {
+                gap: 15px;
+            }
+
+            .socials a {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        /* Font Awesome Icons (to ensure icon display) */
+        .fas, .fab, .far {
+            font-family: 'FontAwesome', sans-serif;
+        }
     </style>
 </head>
 <body>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>LINKECA ROYAL ENTERPRISE</h1>
+            <a href="Pd.html" class="btn-shop">Shop Now</a>
+        </div>
+    </header>
+
     <nav class="navbar">
         <div class="logo">
             <img src="PICS/logo.jpg" alt="LINKECA ROYAL ENTERPRISE Logo">
@@ -784,7 +1102,7 @@
         <div class="content">
             <h1>Live Stylish and Dress Timelessly</h1>
             <p>Experience unparalleled craftsmanship where comfort meets luxury. Our exclusive collections redefine modern elegance for the discerning individual.</p>
-            <a href="Pd.html" class="btn">Explore Collection</a>
+            <a href="Pd.html" class="btn">Shop Now</a>
         </div>
     </div>
 
@@ -1001,42 +1319,55 @@
         <div id="customer-reviews-container" class="reviews-container"></div>
     </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="PICS/logo.jpg" alt="LINKECA ROYAL ENTERPRISE Logo" class="footer-logo-img">
-                <h3 class="footer-brand">LINKECA ROYAL ENTERPRISE</h3>
-                <p class="footer-tagline">Elegance Redefined</p>
+    <section class="about-preview">
+        <h2>About LINKECA ROYAL ENTERPRISE</h2>
+        <p>At LINKECA ROYAL ENTERPRISE, we believe in the power of fashion to transform and inspire. Our premium boutique in Madina Rawling Circle curates the finest selection of designer clothing, accessories, and luxury goods.</p>
+        <p>Every piece in our collection is carefully selected to ensure quality, style, and uniqueness. We're committed to helping our clients discover their personal style and express their individuality.</p>
+        <a href="about.html" class="btn-learn">Learn More About Us</a>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-slide">
+                <div class="testimonial">
+                    <p>"LINKECA ROYAL ENTERPRISE has completely transformed my wardrobe. The quality and uniqueness of their pieces are unmatched in Ghana."</p>
+                    <h3>— Abena K.</h3>
+                </div>
             </div>
-            
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <address>
-                    <p><i class="fa fa-map-marker"></i> Madina Rawling Circle</p>
-                    <p><i class="fa fa-phone"></i> +233 24 123 4567</p>
-                    <p><i class="fa fa-envelope"></i> info@linkecaroyal.com</p>
-                </address>
+            <div class="testimonial-slide">
+                <div class="testimonial">
+                    <p>"I had an amazing shopping experience at LINKECA ROYAL ENTERPRISE. The staff were incredibly helpful, and I found the perfect outfit for my sister's wedding."</p>
+                    <h3>— Kojo A.</h3>
+                </div>
             </div>
-            
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/kharen.mhartey/" target="_blank" rel="noopener" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/katora_luxury/" target="_blank" rel="noopener" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://wa.me/+233595304048" target="_blank" rel="noopener" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+            <div class="testimonial-slide">
+                <div class="testimonial">
+                    <p>"The attention to detail and quality of the garments at LINKECA ROYAL ENTERPRISE is outstanding. I highly recommend this boutique to anyone looking for something special."</p>
+                    <h3>— Ama N.</h3>
                 </div>
             </div>
         </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 LINKECA ROYAL ENTERPRISE. All rights reserved.</p>
+    </section>
+
+    <section class="newsletter">
+        <h2>Stay Connected with LINKECA ROYAL ENTERPRISE</h2>
+        <p>Subscribe to our newsletter for exclusive offers, new arrivals, and fashion inspiration.</p>
+        <form action="#" method="post" class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 LINKECA ROYAL ENTERPRISE. All rights reserved.</p>
+        <p>Premium Boutique: Madina Rawling Circle, Ghana</p>
+        <p>Delivery available at a fee</p>
+        <div class="socials">
+            <a href="https://www.facebook.com/kharen.mhartey/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/linkecaroyalenterprise_/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@linkeca.royal.ent?_t=ZM-8vqinKp1tA7&_r=1" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/+233243143132" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
         </div>
     </footer>
 

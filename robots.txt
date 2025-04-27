@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://devkiel07.github.io/katora-luxury/sitemap.xml
+Sitemap: https://devkiel07.github.io/linkeca-royal-enterprise/sitemap.xml
 
 # Allow all robots complete access
-Disallow: 
+Disallow:

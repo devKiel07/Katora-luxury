@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Get reviews from local storage or use default reviews if none exist
-    const savedReviews = localStorage.getItem('katoraReviews');
+    const savedReviews = localStorage.getItem('linkecaReviews');
     let reviews = savedReviews ? JSON.parse(savedReviews) : [
         {
             name: "Sophie Anderson",
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Add to reviews array and save to local storage
             reviews.unshift(newReview); // Add to beginning of array
-            localStorage.setItem('katoraReviews', JSON.stringify(reviews));
+            localStorage.setItem('linkecaReviews', JSON.stringify(reviews));
             
             // Show success message
             successMessage.style.display = 'block';

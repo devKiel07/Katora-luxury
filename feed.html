@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the latest fashion trends and updates from LINKECA ROYAL ENTERPRISE, featuring premium clothing and accessories from our boutique in Madina Rawling Circle, Ghana.">
+    <meta name="description" content="LINKECA ROYAL ENTERPRISE - Fashion Feed and Latest Trends from our premium boutique in Madina Rawling Circle, Ghana.">
     <link rel="icon" type="image/jpg" href="PICS/logo.jpg">
+    <link rel="shortcut icon" type="image/jpg" href="PICS/logo.jpg">
+    <title>Fashion Feed | LINKECA ROYAL ENTERPRISE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap">
-    <title>Fashion Feed - LINKECA ROYAL ENTERPRISE</title>
     <style>
         :root {
             --primary-gold: #D4AF37;
@@ -122,32 +123,21 @@
             width: 100%;
         }
 
-        .feed-container {
+        .feed-section {
             margin-top: 120px;
             padding: 30px 5%;
         }
 
-        .feed-title {
+        .feed-section h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .feed-intro {
             text-align: center;
             margin-bottom: 40px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        .feed-title h1 {
-            font-size: 36px;
-            font-weight: 400;
-            letter-spacing: 2px;
-            color: var(--dark-charcoal);
-        }
-
-        .feed-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: var(--primary-gold);
-            margin: 15px auto;
+            font-size: 18px;
+            color: var(--medium-grey);
         }
 
         .feed-grid {
@@ -301,14 +291,14 @@
             margin-bottom: 20px;
         }
 
-        .social-links {
+        .socials {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-top: 30px;
         }
 
-        .social-links a {
+        .socials a {
             color: white;
             text-decoration: none;
             font-size: 20px;
@@ -322,7 +312,7 @@
             justify-content: center;
         }
 
-        .social-links a:hover {
+        .socials a:hover {
             background: var(--primary-gold);
             color: var(--soft-black);
             transform: translateY(-5px);
@@ -408,21 +398,25 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="Pd.html">Products</a></li>
-            <li><a href="feed.html">Feed</a></li>
+            <li><a href="feed.html" class="active">Feed</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="feed-container">
-        <div class="feed-title">
-            <h1>Fashion Insights</h1>
-        </div>
+    <header class="feed-header">
+        <h1>LINKECA ROYAL ENTERPRISE Fashion Feed</h1>
+        <p>Stay updated with our latest arrivals, styling tips, and fashion inspiration</p>
+    </header>
+
+    <div class="feed-section">
+        <h1>Fashion Feed</h1>
+        <p class="feed-intro">Stay updated with the latest trends from LINKECA ROYAL ENTERPRISE and our community</p>
         <div class="feed-grid">
             <div class="feed-item">
                 <div class="feed-image">
                     <span class="feed-category">Style Guide</span>
-                    <img src="PICS/plaid jacket and  jeans.jpg" alt="Plaid jacket styled with dark denim jeans - contemporary fashion pairing by Katora Luxury">
+                    <img src="PICS/plaid jacket and  jeans.jpg" alt="Plaid jacket styled with dark denim jeans - contemporary fashion pairing by LINKECA ROYAL ENTERPRISE">
                 </div>
                 <div class="feed-content">
                     <h2 class="feed-title-text">The Art of Pairing Plaid Jackets with Jeans</h2>
@@ -432,8 +426,8 @@
                     </p>
                     <div class="feed-meta">
                         <div class="feed-author">
-                            <img src="PICS/logo.jpg" alt="Katora Style Team author profile image">
-                            <span>Katora Style Team</span>
+                            <img src="PICS/logo.jpg" alt="Linkeca Royal Enterprise editor author profile image">
+                            <span>Linkeca Royal Fashion</span>
                         </div>
                         <div class="feed-time">
                             <i class="far fa-clock"></i>
@@ -446,7 +440,7 @@
             <div class="feed-item">
                 <div class="feed-image">
                     <span class="feed-category">Trend Alert</span>
-                    <img src="PICS/long sleeves top with jeans.jpg" alt="Statement long sleeve top paired with fitted jeans - seasonal fashion trend from Katora Luxury collection">
+                    <img src="PICS/long sleeves top with jeans.jpg" alt="Statement long sleeve top paired with fitted jeans - seasonal fashion trend from LINKECA ROYAL ENTERPRISE collection">
                 </div>
                 <div class="feed-content">
                     <h2 class="feed-title-text">Elevating Everyday Looks with Statement Sleeves</h2>
@@ -456,8 +450,8 @@
                     </p>
                     <div class="feed-meta">
                         <div class="feed-author">
-                            <img src="PICS/logo.jpg" alt="Katora Style Team author profile image">
-                            <span>Katora Style Team</span>
+                            <img src="PICS/logo.jpg" alt="LINKECA ROYAL Style Team author profile image">
+                            <span>LINKECA ROYAL Style Team</span>
                         </div>
                         <div class="feed-time">
                             <i class="far fa-clock"></i>
@@ -470,7 +464,7 @@
             <div class="feed-item">
                 <div class="feed-image">
                     <span class="feed-category">Luxury</span>
-                    <img src="PICS/diamond necklace.jpg" alt="Elegant diamond statement necklace with brilliant cut stones - premium jewelry piece from Katora Luxury accessories">
+                    <img src="PICS/diamond necklace.jpg" alt="Elegant diamond statement necklace with brilliant cut stones - premium jewelry piece from LINKECA ROYAL ENTERPRISE accessories">
                 </div>
                 <div class="feed-content">
                     <h2 class="feed-title-text">The Enduring Allure of Diamond Jewelry</h2>
@@ -480,8 +474,8 @@
                     </p>
                     <div class="feed-meta">
                         <div class="feed-author">
-                            <img src="PICS/logo.jpg" alt="Katora Accessories team author profile image">
-                            <span>Katora Accessories</span>
+                            <img src="PICS/logo.jpg" alt="LINKECA ROYAL Accessories team author profile image">
+                            <span>LINKECA ROYAL Accessories</span>
                         </div>
                         <div class="feed-time">
                             <i class="far fa-clock"></i>
@@ -494,7 +488,7 @@
             <div class="feed-item">
                 <div class="feed-image">
                     <span class="feed-category">Accessories</span>
-                    <img src="PICS/rolex.jpg" alt="Premium luxury timepiece with gold details and precision craftsmanship - investment watch featured by Katora Luxury">
+                    <img src="PICS/rolex.jpg" alt="Premium luxury timepiece with gold details and precision craftsmanship - investment watch featured by LINKECA ROYAL ENTERPRISE">
                 </div>
                 <div class="feed-content">
                     <h2 class="feed-title-text">Timeless Elegance: Investing in Luxury Timepieces</h2>
@@ -504,8 +498,8 @@
                     </p>
                     <div class="feed-meta">
                         <div class="feed-author">
-                            <img src="PICS/logo.jpg" alt="Katora Luxury accessories specialist author profile image">
-                            <span>Katora Luxury</span>
+                            <img src="PICS/logo.jpg" alt="LINKECA ROYAL luxury accessories specialist author profile image">
+                            <span>LINKECA ROYAL Luxury</span>
                         </div>
                         <div class="feed-time">
                             <i class="far fa-clock"></i>
@@ -518,7 +512,7 @@
             <div class="feed-item">
                 <div class="feed-image">
                     <span class="feed-category">Fashion</span>
-                    <img src="PICS/off-shoulder bodycon midi dress.jpg" alt="Fitted off-shoulder bodycon midi dress in elegant black - figure-flattering silhouette from Katora Luxury collection">
+                    <img src="PICS/off-shoulder bodycon midi dress.jpg" alt="Fitted off-shoulder bodycon midi dress in elegant black - figure-flattering silhouette from LINKECA ROYAL ENTERPRISE collection">
                 </div>
                 <div class="feed-content">
                     <h2 class="feed-title-text">The Perfect Silhouette: Off-Shoulder Bodycon Dresses</h2>
@@ -528,8 +522,8 @@
                     </p>
                     <div class="feed-meta">
                         <div class="feed-author">
-                            <img src="PICS/logo.jpg" alt="Katora Style Team author profile image">
-                            <span>Katora Style Team</span>
+                            <img src="PICS/logo.jpg" alt="LINKECA ROYAL Style Team author profile image">
+                            <span>LINKECA ROYAL Style Team</span>
                         </div>
                         <div class="feed-time">
                             <i class="far fa-clock"></i>
@@ -542,7 +536,31 @@
             <div class="feed-item">
                 <div class="feed-image">
                     <span class="feed-category">Style Guide</span>
-                    <img src="PICS/White Shirt Maxi Dress with High Slit.jpg" alt="Flowing white maxi shirt dress with elegant high slit - summer luxury fashion by Katora Luxury">
+                    <img src="PICS/Wide-Leg High-Waisted Pants with Cropped Turtleneck Sweater.jpg" alt="Stylish wide-leg high-waisted pants paired with cropped turtleneck sweater - LINKECA ROYAL ENTERPRISE fashion">
+                </div>
+                <div class="feed-content">
+                    <h2 class="feed-title-text">Effortless Chic: Styling Wide-Leg Pants</h2>
+                    <p class="feed-description">
+                        Wide-leg pants are a must-have for a chic and comfortable outfit. 
+                        Discover how to style them with fitted tops and statement accessories for a balanced look.
+                    </p>
+                    <div class="feed-meta">
+                        <div class="feed-author">
+                            <img src="PICS/logo.jpg" alt="LINKECA ROYAL Style Team author profile image">
+                            <span>LINKECA ROYAL Style Team</span>
+                        </div>
+                        <div class="feed-time">
+                            <i class="far fa-clock"></i>
+                            <span>April 1, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-item">
+                <div class="feed-image">
+                    <span class="feed-category">Fashion</span>
+                    <img src="PICS/White Shirt Maxi Dress with High Slit.jpg" alt="Flowing white maxi shirt dress with elegant high slit - summer luxury fashion by LINKECA ROYAL ENTERPRISE">
                 </div>
                 <div class="feed-content">
                     <h2 class="feed-title-text">Summer Sophistication: The White Shirt Maxi Dress</h2>
@@ -552,8 +570,8 @@
                     </p>
                     <div class="feed-meta">
                         <div class="feed-author">
-                            <img src="PICS/logo.jpg" alt="Katora Fashion editor author profile image">
-                            <span>Katora Fashion</span>
+                            <img src="PICS/logo.jpg" alt="Linkeca Royal Enterprise editor author profile image">
+                            <span>Linkeca Royal Fashion</span>
                         </div>
                         <div class="feed-time">
                             <i class="far fa-clock"></i>
@@ -569,16 +587,11 @@
         <p>&copy; 2025 LINKECA ROYAL ENTERPRISE. All rights reserved.</p>
         <p>Premium Boutique: Madina Rawling Circle, Ghana</p>
         <p>Delivery available at a fee</p>
-        <div class="social-links">
-            <a href="https://www.facebook.com/kharen.mhartey/" target="_blank" rel="noopener" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/katora_luxury/" target="_blank" rel="noopener" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://wa.me/+233595304048" target="_blank" rel="noopener" aria-label="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
+        <div class="socials">
+            <a href="https://www.facebook.com/kharen.mhartey/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/linkecaroyalenterprise_/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@linkeca.royal.ent?_t=ZM-8vqinKp1tA7&_r=1" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/+233243143132" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
         </div>
     </footer>
 </body>
