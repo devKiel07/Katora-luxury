@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LINKECA ROYAL ENTERPRISE - Premium fashion boutique in Madina Rawling Circle, Ghana. Designer clothing, accessories, and luxury goods.">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8K7D52Y1M1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8K7D52Y1M1');
+    </script>
     <link rel="icon" type="image/jpg" href="images/logo.jpg">
     <link rel="shortcut icon" type="image/jpg" href="images/logo.jpg">
     <title>LINKECA ROYAL ENTERPRISE - Premium Fashion Boutique</title>
@@ -835,87 +843,6 @@
             box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
         }
 
-        /* Testimonials Section */
-        .testimonials {
-            padding: 100px 5%;
-            background-color: var(--light-charcoal);
-            text-align: center;
-            color: #fff;
-            position: relative;
-        }
-
-        .testimonials::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: var(--gradient-gold);
-        }
-
-        .testimonials h2 {
-            font-size: 36px;
-            color: #fff;
-            margin-bottom: 50px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .testimonials h2::after {
-            content: '';
-            display: block;
-            width: 60%;
-            height: 3px;
-            background: var(--primary-gold);
-            margin: 15px auto 0;
-        }
-
-        .testimonial-slider {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .testimonial-slide {
-            flex: 1;
-            min-width: 300px;
-            max-width: 350px;
-        }
-
-        .testimonial {
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            padding: 30px;
-            text-align: left;
-            box-shadow: var(--shadow-subtle);
-            transition: var(--transition-smooth);
-            position: relative;
-            border-left: 4px solid var(--primary-gold);
-        }
-
-        .testimonial:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-strong);
-        }
-
-        .testimonial p {
-            font-size: 16px;
-            line-height: 1.8;
-            font-style: italic;
-            margin-bottom: 20px;
-            color: #e0e0e0;
-        }
-
-        .testimonial h3 {
-            font-size: 16px;
-            color: var(--primary-gold);
-            text-align: right;
-            font-weight: 500;
-        }
 
         /* Newsletter Section */
         .newsletter {
@@ -987,15 +914,23 @@
         /* Footer Styles */
         footer {
             background-color: var(--soft-black);
-            color: #fff;
-            padding: 50px 5% 30px;
+            color: white;
+            padding: 60px 5%;
             text-align: center;
+            margin-top: 60px;
         }
 
         footer p {
-            margin-bottom: 15px;
-            font-size: 14px;
-            color: var(--light-grey);
+            margin: 10px 0;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        footer p:first-of-type {
+            color: var(--primary-gold);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         .socials {
@@ -1006,22 +941,23 @@
         }
 
         .socials a {
-            display: inline-flex;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: var(--transition-smooth);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            transition: var(--transition-smooth);
-            text-decoration: none;
         }
 
         .socials a:hover {
-            background-color: var(--primary-gold);
+            background: var(--primary-gold);
             color: var(--soft-black);
-            transform: translateY(-3px);
+            transform: translateY(-5px);
         }
 
         @media screen and (max-width: 768px) {
@@ -1308,7 +1244,7 @@
         
         <div class="review-btn-container">
             <a href="write-review.html" class="review-btn">Write a Review</a>
-            <a href="#" class="review-btn outline">View All Reviews</a>
+            <a href="reviews.html" class="review-btn outline">View All Reviews</a>
         </div>
         
         <!-- Dynamic Reviews Container -->

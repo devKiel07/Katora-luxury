@@ -1,6 +1,15 @@
 User-agent: *
 Allow: /
 Sitemap: https://devkiel07.github.io/linkeca-royal-enterprise/sitemap.xml
+Crawl-delay: 10
 
-# Allow all robots complete access
-Disallow:
+# Optimize crawl budget by excluding unnecessary files
+Disallow: /*.jpg$
+Disallow: /*.png$
+Disallow: /*.gif$
+Disallow: /*.pdf$
+
+# Allow important directories and files
+Allow: /images/logo.jpg
+Allow: /images/product*.jpg
+Allow: /images/product*.png

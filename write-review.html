@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8K7D52Y1M1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8K7D52Y1M1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Share your experience with LINKECA ROYAL ENTERPRISE. Write a review about our premium fashion products and services.">
@@ -309,6 +317,61 @@
                 justify-content: center;
             }
         }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--soft-black);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 10px 0;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        footer p:first-of-type {
+            color: var(--primary-gold);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .socials a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: var(--transition-smooth);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .socials a:hover {
+            background: var(--primary-gold);
+            color: var(--soft-black);
+            transform: translateY(-5px);
+        }
+
+        .footer-content p {
+            margin: 8px 0;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 <body>
@@ -383,6 +446,22 @@
             </div>
         </form>
     </div>
+
+    <footer>
+        <div class="footer-content">
+          
+            <p>&copy; 2025 LINKECA ROYAL ENTERPRISE. All rights reserved.</p>
+            <p>Premium Boutique: Madina Rawling Circle, Ghana</p>
+            <p>Delivery available at a fee</p>
+
+            <div class="socials">
+                <a href="https://www.facebook.com/kharen.mhartey/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/linkecaroyalenterprise_/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@linkeca.royal.ent?_t=ZM-8vqinKp1tA7&_r=1" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/+233243143132" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/reviews.js"></script>
 </body>
