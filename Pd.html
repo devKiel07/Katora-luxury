@@ -294,7 +294,57 @@
         .product-card .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(212, 175, 55, 0.5);
-            background: linear-gradient(to right, var(--secondary-gold), var(--primary-gold));
+            background: linear-gradient(to right, var (--secondary-gold), var(--primary-gold));
+        }
+
+        .customer-reviews {
+            margin-top: 60px;
+            padding: 40px 5%;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+            padding: 0 20px;
+        }
+
+        .review-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-gold);
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .review-text {
+            font-size: 16px;
+            color: var(--dark-charcoal);
+            margin-bottom: 10px;
+        }
+
+        .review-author {
+            font-size: 14px;
+            color: var(--medium-grey);
         }
 
         footer {
@@ -348,6 +398,10 @@
         @media screen and (max-width: 1024px) {
             .product-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -517,6 +571,30 @@
                 
                 <p>GHC250</p>
                 <a href="payment.html?product=Lingerie%20available%20GHC%20sold%20all%20sizes&price=250" class="btn">Buy Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="customer-reviews">
+        <div class="section-title">
+            <h1>Customer Reviews</h1>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <p class="review-text">"Absolutely love the quality of the products! The delivery was fast, and the customer service was excellent."</p>
+                <p class="review-author">- Sarah A.</p>
+            </div>
+            <div class="review-card">
+                <p class="review-text">"The Hermès Birkin Collection is stunning! I’m so happy with my purchase. Highly recommend LINKECA ROYAL ENTERPRISE."</p>
+                <p class="review-author">- Michael T.</p>
+            </div>
+            <div class="review-card">
+                <p class="review-text">"Great experience shopping here. The products are exactly as described, and the prices are reasonable."</p>
+                <p class="review-author">- Nana K.</p>
+            </div>
+            <div class="review-card">
+                <p class="review-text">"I’ve been a loyal customer for years. LINKECA ROYAL ENTERPRISE never disappoints. The quality is unmatched."</p>
+                <p class="review-author">- Akosua B.</p>
             </div>
         </div>
     </div>
